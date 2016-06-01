@@ -1,0 +1,166 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section id="section-content" class="content page-17 moto-section" data-widget="section" data-container="section">
+    <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-sm-12" data-container="container">
+                    <div class="moto-widget moto-widget-text moto-preset-default       moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto"
+                         data-widget="text" data-preset="default" data-spacing="lama">
+                        <div class="moto-widget-text-content moto-widget-text-editable"><p
+                                class="moto-text_system_4" style="text-align: center;">Contact</p></div>
+                    </div>
+                    <div class="moto-widget moto-widget-map moto-preset-default    moto-align-center moto-spacing-top-small moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                         data-widget="map" data-preset="default" data-align="center" data-spacing="saaa"
+                         data-width="100">
+                        <div class="moto-widget-cover"></div>
+                        <iframe data-zoom="10" data-address="Glasgow" class="moto-widget-map-frame"
+                                style="border: 0px none; width: 100%; height: 372px;"
+                                src="https://maps.google.com/maps?q=Glasgow&amp;z=10&amp;t=m&amp;output=embed"
+                                frameborder="0" height="200" width="100">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-sm-5" data-container="container">
+                    <div class="moto-widget moto-widget-text moto-preset-default      moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto"
+                         data-widget="text" data-preset="default" data-spacing="lama">
+                        <div class="moto-widget-text-content moto-widget-text-editable"><p
+                                style="text-align: center;" class="moto-text_system_4">Address<br></p></div>
+                    </div>
+                    <div class="moto-widget moto-widget-text moto-preset-default     moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-small moto-spacing-left-auto"
+                         data-widget="text" data-preset="default" data-spacing="aasa">
+                        <div class="moto-widget-text-content moto-widget-text-editable"><p
+                                class="moto-text_system_6"><span class="moto-color2_3">8901 Marmora Road,<br>Glasgow, D04 89GR.</span>
+                        </p></div>
+                    </div>
+                    <div class="moto-widget moto-widget-text moto-preset-default    moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-auto moto-spacing-left-auto"
+                         data-widget="text" data-preset="default" data-spacing="aaaa">
+                        <div class="moto-widget-text-content moto-widget-text-editable"><p class="moto-text_262">
+                            Freephone:&nbsp;&nbsp; +1 800 559 6580<br>Telephone:&nbsp;&nbsp; +1 800 603 6035<br>FAX:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            +1 800 889 9898<br>E-mail: <a class="moto-link" data-action="email"
+                                                          href="mailto:mail@demolink.org">mail@demolink.org</a><br>
+                        </p></div>
+                    </div>
+                </div>
+                <div class="moto-cell col-sm-7" data-container="container">
+                    <div class="moto-widget moto-widget-text moto-preset-default      moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto"
+                         data-widget="text" data-preset="default" data-spacing="lama">
+                        <div class="moto-widget-text-content moto-widget-text-editable"><p
+                                class="moto-text_system_4" style="text-align: center;">Get in touch</p></div>
+                    </div>
+                    <div data-widget-id="wid__contact_form__574f233f4680a"
+                         class="moto-widget moto-widget-contact_form moto-preset-default moto-widget-empty moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto "
+                         data-preset="default" data-widget="contact_form" data-type="" data-spacing="aala">
+                        <div ng-controller="widget.ContactForm.Controller"
+                             ng-init="hash = '1@0cTSNexADwS9Hg5lwoWRwICURWHkr24Mp24saszQD9Ih1LBXhVlrLXRUySNy0q8rZLWDyzPuMAgZ/UuYzs6ZX9EjebP8QwYD8nvCxj00G/6tc7J9w8bVVYwP1OLj/uTY5eqW7ghLTgRBIsIpXI6cFtr3yQIBdkxtkKnfJjwRsn8='">
+
+                            <form class="moto-widget-contact_form-form" role="form" name="contactForm"
+                                  ng-submit="submit()" novalidate>
+                                <div ng-show="sending" class="contact-form-loading"></div>
+
+
+                                <div class="moto-widget-contact_form-group">
+                                    <label for="field_name" class="moto-widget-contact_form-label">Name</label>
+                                    <input type="text"
+                                           class="moto-widget-contact_form-field moto-widget-contact_form-input"
+                                           placeholder="Name *" ng-blur="validate('name')" required
+                                           ng-model-options="{ updateOn: 'blur' }" name="name" id="field_name"
+                                           ng-model="message.name"/>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.name.$invalid && !contactForm.name.$pristine && !contactForm.name.emailInvalid">Field is required</span>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.name.emailInvalid && !contactForm.name.$pristine">Incorrect email</span>
+                                </div>
+
+
+                                <div class="moto-widget-contact_form-group">
+                                    <label for="field_email" class="moto-widget-contact_form-label">E-mail</label>
+                                    <input type="text"
+                                           class="moto-widget-contact_form-field moto-widget-contact_form-input"
+                                           placeholder="E-mail *" ng-blur="validate('email')" required
+                                           ng-model-options="{ updateOn: 'blur' }" name="email" id="field_email"
+                                           ng-model="message.email"/>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.email.$invalid && !contactForm.email.$pristine && !contactForm.email.emailInvalid">Field is required</span>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.email.emailInvalid && !contactForm.email.$pristine">Incorrect email</span>
+                                </div>
+
+
+                                <div class="moto-widget-contact_form-group">
+                                    <label for="field_phone" class="moto-widget-contact_form-label">Phone</label>
+                                    <input type="text"
+                                           class="moto-widget-contact_form-field moto-widget-contact_form-input"
+                                           placeholder="Phone " ng-model-options="{ updateOn: 'blur' }" name="phone"
+                                           id="field_phone" ng-model="message.phone"/>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.phone.$invalid && !contactForm.phone.$pristine && !contactForm.phone.emailInvalid">Field is required</span>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.phone.emailInvalid && !contactForm.phone.$pristine">Incorrect email</span>
+                                </div>
+
+
+                                <div class="moto-widget-contact_form-group">
+                                    <label for="field_message"
+                                           class="moto-widget-contact_form-label">Message</label>
+                                        <textarea
+                                                class="moto-widget-contact_form-field moto-widget-contact_form-textarea"
+                                                rows="3" placeholder="Message *" ng-blur="validate('message')" required
+                                                ng-model-options="{ updateOn: 'blur' }" name="message"
+                                                id="field_message" ng-model="message.message"></textarea>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.message.$invalid && !contactForm.message.$pristine">Field is required</span>
+                                </div>
+
+
+                                <div class="moto-widget-contact_form-success ng-cloak" ng-cloak ng-show="emailSent">
+                                    Your message was sent successfully
+                                </div>
+
+                                <div class="moto-widget-contact_form-danger ng-cloak" ng-cloak ng-show="emailError">
+                                    Sorry, your message was not sent
+                                </div>
+
+
+                                <div class="moto-widget-contact_form-buttons">
+
+
+                                    <div class="moto-widget moto-widget-button moto-preset-5 moto-align-left"
+                                         data-preset="5" data-align="left">
+                                        <a ng-click="submit();" class="moto-widget-button-link moto-size-large"
+                                           data-size="large"><span class="fa moto-widget-theme-icon"></span><span
+                                                class="moto-widget-button-label">SEND</span></a>
+                                    </div>
+                                    <button type="submit" class="hidden"></button>
+
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="moto-widget moto-widget-row" data-widget="row">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-sm-12" data-container="container">
+                    <div class="moto-widget moto-widget-spacer moto-preset-default" data-widget="spacer"
+                         data-spacing="">
+                        <div class="moto-widget-spacer-block" style="height: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

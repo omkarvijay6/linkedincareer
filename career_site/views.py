@@ -15,3 +15,6 @@ def services(request):
 
 def news(request):
     return render_to_response('news.html', {}, context_instance=RequestContext(request))
+
+def contact(request):
+    return render_to_response('contact.html', {}, context_instance=RequestContext(request))

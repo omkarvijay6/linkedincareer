@@ -12,3 +12,6 @@ def about(request):
 
 def services(request):
     return render_to_response('services.html', {}, context_instance=RequestContext(request))
+
+def news(request):
+    return render_to_response('news.html', {}, context_instance=RequestContext(request))

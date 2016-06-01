@@ -1,0 +1,2519 @@
+
+@font-face {
+    font-family: "FontAwesome";
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+}
+.fa {
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: inherit;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+.fa-lg {
+    font-size: 1.33333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
+.fa-2x {
+    font-size: 2em;
+}
+.fa-3x {
+    font-size: 3em;
+}
+.fa-4x {
+    font-size: 4em;
+}
+.fa-5x {
+    font-size: 5em;
+}
+.fa-fw {
+    text-align: center;
+    width: 1.28571em;
+}
+.fa-ul {
+    list-style-type: none;
+    margin-left: 2.14286em;
+    padding-left: 0;
+}
+.fa-ul > li {
+    position: relative;
+}
+.fa-li {
+    left: -2.14286em;
+    position: absolute;
+    text-align: center;
+    top: 0.142857em;
+    width: 2.14286em;
+}
+.fa-li.fa-lg {
+    left: -1.85714em;
+}
+.fa-border {
+    border: 0.08em solid #eee;
+    border-radius: 0.1em;
+    padding: 0.2em 0.25em 0.15em;
+}
+.pull-right {
+    float: right;
+}
+.pull-left {
+    float: left;
+}
+.fa.pull-left {
+    margin-right: 0.3em;
+}
+.fa.pull-right {
+    margin-left: 0.3em;
+}
+.fa-spin {
+    animation: 2s linear 0s normal none infinite running fa-spin;
+}
+@keyframes fa-spin {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(359deg);
+}
+}
+.fa-rotate-90 {
+    transform: rotate(90deg);
+}
+.fa-rotate-180 {
+    transform: rotate(180deg);
+}
+.fa-rotate-270 {
+    transform: rotate(270deg);
+}
+.fa-flip-horizontal {
+    transform: scale(-1, 1);
+}
+.fa-flip-vertical {
+    transform: scale(1, -1);
+}
+:root .fa-rotate-90, *:root .fa-rotate-180, *:root .fa-rotate-270, *:root .fa-flip-horizontal, *:root .fa-flip-vertical {
+    filter: none;
+}
+.fa-stack {
+    display: inline-block;
+    height: 2em;
+    line-height: 2em;
+    position: relative;
+    vertical-align: middle;
+    width: 2em;
+}
+.fa-stack-1x, .fa-stack-2x {
+    left: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.fa-stack-1x {
+    line-height: inherit;
+}
+.fa-stack-2x {
+    font-size: 2em;
+}
+.fa-inverse {
+    color: #fff;
+}
+.fa-glass::before {
+    content: "";
+}
+.fa-music::before {
+    content: "";
+}
+.fa-search::before {
+    content: "";
+}
+.fa-envelope-o::before {
+    content: "";
+}
+.fa-heart::before {
+    content: "";
+}
+.fa-star::before {
+    content: "";
+}
+.fa-star-o::before {
+    content: "";
+}
+.fa-user::before {
+    content: "";
+}
+.fa-film::before {
+    content: "";
+}
+.fa-th-large::before {
+    content: "";
+}
+.fa-th::before {
+    content: "";
+}
+.fa-th-list::before {
+    content: "";
+}
+.fa-check::before {
+    content: "";
+}
+.fa-remove::before, .fa-close::before, .fa-times::before {
+    content: "";
+}
+.fa-search-plus::before {
+    content: "";
+}
+.fa-search-minus::before {
+    content: "";
+}
+.fa-power-off::before {
+    content: "";
+}
+.fa-signal::before {
+    content: "";
+}
+.fa-gear::before, .fa-cog::before {
+    content: "";
+}
+.fa-trash-o::before {
+    content: "";
+}
+.fa-home::before {
+    content: "";
+}
+.fa-file-o::before {
+    content: "";
+}
+.fa-clock-o::before {
+    content: "";
+}
+.fa-road::before {
+    content: "";
+}
+.fa-download::before {
+    content: "";
+}
+.fa-arrow-circle-o-down::before {
+    content: "";
+}
+.fa-arrow-circle-o-up::before {
+    content: "";
+}
+.fa-inbox::before {
+    content: "";
+}
+.fa-play-circle-o::before {
+    content: "";
+}
+.fa-rotate-right::before, .fa-repeat::before {
+    content: "";
+}
+.fa-refresh::before {
+    content: "";
+}
+.fa-list-alt::before {
+    content: "";
+}
+.fa-lock::before {
+    content: "";
+}
+.fa-flag::before {
+    content: "";
+}
+.fa-headphones::before {
+    content: "";
+}
+.fa-volume-off::before {
+    content: "";
+}
+.fa-volume-down::before {
+    content: "";
+}
+.fa-volume-up::before {
+    content: "";
+}
+.fa-qrcode::before {
+    content: "";
+}
+.fa-barcode::before {
+    content: "";
+}
+.fa-tag::before {
+    content: "";
+}
+.fa-tags::before {
+    content: "";
+}
+.fa-book::before {
+    content: "";
+}
+.fa-bookmark::before {
+    content: "";
+}
+.fa-print::before {
+    content: "";
+}
+.fa-camera::before {
+    content: "";
+}
+.fa-font::before {
+    content: "";
+}
+.fa-bold::before {
+    content: "";
+}
+.fa-italic::before {
+    content: "";
+}
+.fa-text-height::before {
+    content: "";
+}
+.fa-text-width::before {
+    content: "";
+}
+.fa-align-left::before {
+    content: "";
+}
+.fa-align-center::before {
+    content: "";
+}
+.fa-align-right::before {
+    content: "";
+}
+.fa-align-justify::before {
+    content: "";
+}
+.fa-list::before {
+    content: "";
+}
+.fa-dedent::before, .fa-outdent::before {
+    content: "";
+}
+.fa-indent::before {
+    content: "";
+}
+.fa-video-camera::before {
+    content: "";
+}
+.fa-photo::before, .fa-image::before, .fa-picture-o::before {
+    content: "";
+}
+.fa-pencil::before {
+    content: "";
+}
+.fa-map-marker::before {
+    content: "";
+}
+.fa-adjust::before {
+    content: "";
+}
+.fa-tint::before {
+    content: "";
+}
+.fa-edit::before, .fa-pencil-square-o::before {
+    content: "";
+}
+.fa-share-square-o::before {
+    content: "";
+}
+.fa-check-square-o::before {
+    content: "";
+}
+.fa-arrows::before {
+    content: "";
+}
+.fa-step-backward::before {
+    content: "";
+}
+.fa-fast-backward::before {
+    content: "";
+}
+.fa-backward::before {
+    content: "";
+}
+.fa-play::before {
+    content: "";
+}
+.fa-pause::before {
+    content: "";
+}
+.fa-stop::before {
+    content: "";
+}
+.fa-forward::before {
+    content: "";
+}
+.fa-fast-forward::before {
+    content: "";
+}
+.fa-step-forward::before {
+    content: "";
+}
+.fa-eject::before {
+    content: "";
+}
+.fa-chevron-left::before {
+    content: "";
+}
+.fa-chevron-right::before {
+    content: "";
+}
+.fa-plus-circle::before {
+    content: "";
+}
+.fa-minus-circle::before {
+    content: "";
+}
+.fa-times-circle::before {
+    content: "";
+}
+.fa-check-circle::before {
+    content: "";
+}
+.fa-question-circle::before {
+    content: "";
+}
+.fa-info-circle::before {
+    content: "";
+}
+.fa-crosshairs::before {
+    content: "";
+}
+.fa-times-circle-o::before {
+    content: "";
+}
+.fa-check-circle-o::before {
+    content: "";
+}
+.fa-ban::before {
+    content: "";
+}
+.fa-arrow-left::before {
+    content: "";
+}
+.fa-arrow-right::before {
+    content: "";
+}
+.fa-arrow-up::before {
+    content: "";
+}
+.fa-arrow-down::before {
+    content: "";
+}
+.fa-mail-forward::before, .fa-share::before {
+    content: "";
+}
+.fa-expand::before {
+    content: "";
+}
+.fa-compress::before {
+    content: "";
+}
+.fa-plus::before {
+    content: "";
+}
+.fa-minus::before {
+    content: "";
+}
+.fa-asterisk::before {
+    content: "";
+}
+.fa-exclamation-circle::before {
+    content: "";
+}
+.fa-gift::before {
+    content: "";
+}
+.fa-leaf::before {
+    content: "";
+}
+.fa-fire::before {
+    content: "";
+}
+.fa-eye::before {
+    content: "";
+}
+.fa-eye-slash::before {
+    content: "";
+}
+.fa-warning::before, .fa-exclamation-triangle::before {
+    content: "";
+}
+.fa-plane::before {
+    content: "";
+}
+.fa-calendar::before {
+    content: "";
+}
+.fa-random::before {
+    content: "";
+}
+.fa-comment::before {
+    content: "";
+}
+.fa-magnet::before {
+    content: "";
+}
+.fa-chevron-up::before {
+    content: "";
+}
+.fa-chevron-down::before {
+    content: "";
+}
+.fa-retweet::before {
+    content: "";
+}
+.fa-shopping-cart::before {
+    content: "";
+}
+.fa-folder::before {
+    content: "";
+}
+.fa-folder-open::before {
+    content: "";
+}
+.fa-arrows-v::before {
+    content: "";
+}
+.fa-arrows-h::before {
+    content: "";
+}
+.fa-bar-chart-o::before, .fa-bar-chart::before {
+    content: "";
+}
+.fa-twitter-square::before {
+    content: "";
+}
+.fa-facebook-square::before {
+    content: "";
+}
+.fa-camera-retro::before {
+    content: "";
+}
+.fa-key::before {
+    content: "";
+}
+.fa-gears::before, .fa-cogs::before {
+    content: "";
+}
+.fa-comments::before {
+    content: "";
+}
+.fa-thumbs-o-up::before {
+    content: "";
+}
+.fa-thumbs-o-down::before {
+    content: "";
+}
+.fa-star-half::before {
+    content: "";
+}
+.fa-heart-o::before {
+    content: "";
+}
+.fa-sign-out::before {
+    content: "";
+}
+.fa-linkedin-square::before {
+    content: "";
+}
+.fa-thumb-tack::before {
+    content: "";
+}
+.fa-external-link::before {
+    content: "";
+}
+.fa-sign-in::before {
+    content: "";
+}
+.fa-trophy::before {
+    content: "";
+}
+.fa-github-square::before {
+    content: "";
+}
+.fa-upload::before {
+    content: "";
+}
+.fa-lemon-o::before {
+    content: "";
+}
+.fa-phone::before {
+    content: "";
+}
+.fa-square-o::before {
+    content: "";
+}
+.fa-bookmark-o::before {
+    content: "";
+}
+.fa-phone-square::before {
+    content: "";
+}
+.fa-twitter::before {
+    content: "";
+}
+.fa-facebook::before {
+    content: "";
+}
+.fa-github::before {
+    content: "";
+}
+.fa-unlock::before {
+    content: "";
+}
+.fa-credit-card::before {
+    content: "";
+}
+.fa-rss::before {
+    content: "";
+}
+.fa-hdd-o::before {
+    content: "";
+}
+.fa-bullhorn::before {
+    content: "";
+}
+.fa-bell::before {
+    content: "";
+}
+.fa-certificate::before {
+    content: "";
+}
+.fa-hand-o-right::before {
+    content: "";
+}
+.fa-hand-o-left::before {
+    content: "";
+}
+.fa-hand-o-up::before {
+    content: "";
+}
+.fa-hand-o-down::before {
+    content: "";
+}
+.fa-arrow-circle-left::before {
+    content: "";
+}
+.fa-arrow-circle-right::before {
+    content: "";
+}
+.fa-arrow-circle-up::before {
+    content: "";
+}
+.fa-arrow-circle-down::before {
+    content: "";
+}
+.fa-globe::before {
+    content: "";
+}
+.fa-wrench::before {
+    content: "";
+}
+.fa-tasks::before {
+    content: "";
+}
+.fa-filter::before {
+    content: "";
+}
+.fa-briefcase::before {
+    content: "";
+}
+.fa-arrows-alt::before {
+    content: "";
+}
+.fa-group::before, .fa-users::before {
+    content: "";
+}
+.fa-chain::before, .fa-link::before {
+    content: "";
+}
+.fa-cloud::before {
+    content: "";
+}
+.fa-flask::before {
+    content: "";
+}
+.fa-cut::before, .fa-scissors::before {
+    content: "";
+}
+.fa-copy::before, .fa-files-o::before {
+    content: "";
+}
+.fa-paperclip::before {
+    content: "";
+}
+.fa-save::before, .fa-floppy-o::before {
+    content: "";
+}
+.fa-square::before {
+    content: "";
+}
+.fa-navicon::before, .fa-reorder::before, .fa-bars::before {
+    content: "";
+}
+.fa-list-ul::before {
+    content: "";
+}
+.fa-list-ol::before {
+    content: "";
+}
+.fa-strikethrough::before {
+    content: "";
+}
+.fa-underline::before {
+    content: "";
+}
+.fa-table::before {
+    content: "";
+}
+.fa-magic::before {
+    content: "";
+}
+.fa-truck::before {
+    content: "";
+}
+.fa-pinterest::before {
+    content: "";
+}
+.fa-pinterest-square::before {
+    content: "";
+}
+.fa-google-plus-square::before {
+    content: "";
+}
+.fa-google-plus::before {
+    content: "";
+}
+.fa-money::before {
+    content: "";
+}
+.fa-caret-down::before {
+    content: "";
+}
+.fa-caret-up::before {
+    content: "";
+}
+.fa-caret-left::before {
+    content: "";
+}
+.fa-caret-right::before {
+    content: "";
+}
+.fa-columns::before {
+    content: "";
+}
+.fa-unsorted::before, .fa-sort::before {
+    content: "";
+}
+.fa-sort-down::before, .fa-sort-desc::before {
+    content: "";
+}
+.fa-sort-up::before, .fa-sort-asc::before {
+    content: "";
+}
+.fa-envelope::before {
+    content: "";
+}
+.fa-linkedin::before {
+    content: "";
+}
+.fa-rotate-left::before, .fa-undo::before {
+    content: "";
+}
+.fa-legal::before, .fa-gavel::before {
+    content: "";
+}
+.fa-dashboard::before, .fa-tachometer::before {
+    content: "";
+}
+.fa-comment-o::before {
+    content: "";
+}
+.fa-comments-o::before {
+    content: "";
+}
+.fa-flash::before, .fa-bolt::before {
+    content: "";
+}
+.fa-sitemap::before {
+    content: "";
+}
+.fa-umbrella::before {
+    content: "";
+}
+.fa-paste::before, .fa-clipboard::before {
+    content: "";
+}
+.fa-lightbulb-o::before {
+    content: "";
+}
+.fa-exchange::before {
+    content: "";
+}
+.fa-cloud-download::before {
+    content: "";
+}
+.fa-cloud-upload::before {
+    content: "";
+}
+.fa-user-md::before {
+    content: "";
+}
+.fa-stethoscope::before {
+    content: "";
+}
+.fa-suitcase::before {
+    content: "";
+}
+.fa-bell-o::before {
+    content: "";
+}
+.fa-coffee::before {
+    content: "";
+}
+.fa-cutlery::before {
+    content: "";
+}
+.fa-file-text-o::before {
+    content: "";
+}
+.fa-building-o::before {
+    content: "";
+}
+.fa-hospital-o::before {
+    content: "";
+}
+.fa-ambulance::before {
+    content: "";
+}
+.fa-medkit::before {
+    content: "";
+}
+.fa-fighter-jet::before {
+    content: "";
+}
+.fa-beer::before {
+    content: "";
+}
+.fa-h-square::before {
+    content: "";
+}
+.fa-plus-square::before {
+    content: "";
+}
+.fa-angle-double-left::before {
+    content: "";
+}
+.fa-angle-double-right::before {
+    content: "";
+}
+.fa-angle-double-up::before {
+    content: "";
+}
+.fa-angle-double-down::before {
+    content: "";
+}
+.fa-angle-left::before {
+    content: "";
+}
+.fa-angle-right::before {
+    content: "";
+}
+.fa-angle-up::before {
+    content: "";
+}
+.fa-angle-down::before {
+    content: "";
+}
+.fa-desktop::before {
+    content: "";
+}
+.fa-laptop::before {
+    content: "";
+}
+.fa-tablet::before {
+    content: "";
+}
+.fa-mobile-phone::before, .fa-mobile::before {
+    content: "";
+}
+.fa-circle-o::before {
+    content: "";
+}
+.fa-quote-left::before {
+    content: "";
+}
+.fa-quote-right::before {
+    content: "";
+}
+.fa-spinner::before {
+    content: "";
+}
+.fa-circle::before {
+    content: "";
+}
+.fa-mail-reply::before, .fa-reply::before {
+    content: "";
+}
+.fa-github-alt::before {
+    content: "";
+}
+.fa-folder-o::before {
+    content: "";
+}
+.fa-folder-open-o::before {
+    content: "";
+}
+.fa-smile-o::before {
+    content: "";
+}
+.fa-frown-o::before {
+    content: "";
+}
+.fa-meh-o::before {
+    content: "";
+}
+.fa-gamepad::before {
+    content: "";
+}
+.fa-keyboard-o::before {
+    content: "";
+}
+.fa-flag-o::before {
+    content: "";
+}
+.fa-flag-checkered::before {
+    content: "";
+}
+.fa-terminal::before {
+    content: "";
+}
+.fa-code::before {
+    content: "";
+}
+.fa-mail-reply-all::before, .fa-reply-all::before {
+    content: "";
+}
+.fa-star-half-empty::before, .fa-star-half-full::before, .fa-star-half-o::before {
+    content: "";
+}
+.fa-location-arrow::before {
+    content: "";
+}
+.fa-crop::before {
+    content: "";
+}
+.fa-code-fork::before {
+    content: "";
+}
+.fa-unlink::before, .fa-chain-broken::before {
+    content: "";
+}
+.fa-question::before {
+    content: "";
+}
+.fa-info::before {
+    content: "";
+}
+.fa-exclamation::before {
+    content: "";
+}
+.fa-superscript::before {
+    content: "";
+}
+.fa-subscript::before {
+    content: "";
+}
+.fa-eraser::before {
+    content: "";
+}
+.fa-puzzle-piece::before {
+    content: "";
+}
+.fa-microphone::before {
+    content: "";
+}
+.fa-microphone-slash::before {
+    content: "";
+}
+.fa-shield::before {
+    content: "";
+}
+.fa-calendar-o::before {
+    content: "";
+}
+.fa-fire-extinguisher::before {
+    content: "";
+}
+.fa-rocket::before {
+    content: "";
+}
+.fa-maxcdn::before {
+    content: "";
+}
+.fa-chevron-circle-left::before {
+    content: "";
+}
+.fa-chevron-circle-right::before {
+    content: "";
+}
+.fa-chevron-circle-up::before {
+    content: "";
+}
+.fa-chevron-circle-down::before {
+    content: "";
+}
+.fa-html5::before {
+    content: "";
+}
+.fa-css3::before {
+    content: "";
+}
+.fa-anchor::before {
+    content: "";
+}
+.fa-unlock-alt::before {
+    content: "";
+}
+.fa-bullseye::before {
+    content: "";
+}
+.fa-ellipsis-h::before {
+    content: "";
+}
+.fa-ellipsis-v::before {
+    content: "";
+}
+.fa-rss-square::before {
+    content: "";
+}
+.fa-play-circle::before {
+    content: "";
+}
+.fa-ticket::before {
+    content: "";
+}
+.fa-minus-square::before {
+    content: "";
+}
+.fa-minus-square-o::before {
+    content: "";
+}
+.fa-level-up::before {
+    content: "";
+}
+.fa-level-down::before {
+    content: "";
+}
+.fa-check-square::before {
+    content: "";
+}
+.fa-pencil-square::before {
+    content: "";
+}
+.fa-external-link-square::before {
+    content: "";
+}
+.fa-share-square::before {
+    content: "";
+}
+.fa-compass::before {
+    content: "";
+}
+.fa-toggle-down::before, .fa-caret-square-o-down::before {
+    content: "";
+}
+.fa-toggle-up::before, .fa-caret-square-o-up::before {
+    content: "";
+}
+.fa-toggle-right::before, .fa-caret-square-o-right::before {
+    content: "";
+}
+.fa-euro::before, .fa-eur::before {
+    content: "";
+}
+.fa-gbp::before {
+    content: "";
+}
+.fa-dollar::before, .fa-usd::before {
+    content: "";
+}
+.fa-rupee::before, .fa-inr::before {
+    content: "";
+}
+.fa-cny::before, .fa-rmb::before, .fa-yen::before, .fa-jpy::before {
+    content: "";
+}
+.fa-ruble::before, .fa-rouble::before, .fa-rub::before {
+    content: "";
+}
+.fa-won::before, .fa-krw::before {
+    content: "";
+}
+.fa-bitcoin::before, .fa-btc::before {
+    content: "";
+}
+.fa-file::before {
+    content: "";
+}
+.fa-file-text::before {
+    content: "";
+}
+.fa-sort-alpha-asc::before {
+    content: "";
+}
+.fa-sort-alpha-desc::before {
+    content: "";
+}
+.fa-sort-amount-asc::before {
+    content: "";
+}
+.fa-sort-amount-desc::before {
+    content: "";
+}
+.fa-sort-numeric-asc::before {
+    content: "";
+}
+.fa-sort-numeric-desc::before {
+    content: "";
+}
+.fa-thumbs-up::before {
+    content: "";
+}
+.fa-thumbs-down::before {
+    content: "";
+}
+.fa-youtube-square::before {
+    content: "";
+}
+.fa-youtube::before {
+    content: "";
+}
+.fa-xing::before {
+    content: "";
+}
+.fa-xing-square::before {
+    content: "";
+}
+.fa-youtube-play::before {
+    content: "";
+}
+.fa-dropbox::before {
+    content: "";
+}
+.fa-stack-overflow::before {
+    content: "";
+}
+.fa-instagram::before {
+    content: "";
+}
+.fa-flickr::before {
+    content: "";
+}
+.fa-adn::before {
+    content: "";
+}
+.fa-bitbucket::before {
+    content: "";
+}
+.fa-bitbucket-square::before {
+    content: "";
+}
+.fa-tumblr::before {
+    content: "";
+}
+.fa-tumblr-square::before {
+    content: "";
+}
+.fa-long-arrow-down::before {
+    content: "";
+}
+.fa-long-arrow-up::before {
+    content: "";
+}
+.fa-long-arrow-left::before {
+    content: "";
+}
+.fa-long-arrow-right::before {
+    content: "";
+}
+.fa-apple::before {
+    content: "";
+}
+.fa-windows::before {
+    content: "";
+}
+.fa-android::before {
+    content: "";
+}
+.fa-linux::before {
+    content: "";
+}
+.fa-dribbble::before {
+    content: "";
+}
+.fa-skype::before {
+    content: "";
+}
+.fa-foursquare::before {
+    content: "";
+}
+.fa-trello::before {
+    content: "";
+}
+.fa-female::before {
+    content: "";
+}
+.fa-male::before {
+    content: "";
+}
+.fa-gittip::before {
+    content: "";
+}
+.fa-sun-o::before {
+    content: "";
+}
+.fa-moon-o::before {
+    content: "";
+}
+.fa-archive::before {
+    content: "";
+}
+.fa-bug::before {
+    content: "";
+}
+.fa-vk::before {
+    content: "";
+}
+.fa-weibo::before {
+    content: "";
+}
+.fa-renren::before {
+    content: "";
+}
+.fa-pagelines::before {
+    content: "";
+}
+.fa-stack-exchange::before {
+    content: "";
+}
+.fa-arrow-circle-o-right::before {
+    content: "";
+}
+.fa-arrow-circle-o-left::before {
+    content: "";
+}
+.fa-toggle-left::before, .fa-caret-square-o-left::before {
+    content: "";
+}
+.fa-dot-circle-o::before {
+    content: "";
+}
+.fa-wheelchair::before {
+    content: "";
+}
+.fa-vimeo-square::before {
+    content: "";
+}
+.fa-turkish-lira::before, .fa-try::before {
+    content: "";
+}
+.fa-plus-square-o::before {
+    content: "";
+}
+.fa-space-shuttle::before {
+    content: "";
+}
+.fa-slack::before {
+    content: "";
+}
+.fa-envelope-square::before {
+    content: "";
+}
+.fa-wordpress::before {
+    content: "";
+}
+.fa-openid::before {
+    content: "";
+}
+.fa-institution::before, .fa-bank::before, .fa-university::before {
+    content: "";
+}
+.fa-mortar-board::before, .fa-graduation-cap::before {
+    content: "";
+}
+.fa-yahoo::before {
+    content: "";
+}
+.fa-google::before {
+    content: "";
+}
+.fa-reddit::before {
+    content: "";
+}
+.fa-reddit-square::before {
+    content: "";
+}
+.fa-stumbleupon-circle::before {
+    content: "";
+}
+.fa-stumbleupon::before {
+    content: "";
+}
+.fa-delicious::before {
+    content: "";
+}
+.fa-digg::before {
+    content: "";
+}
+.fa-pied-piper::before {
+    content: "";
+}
+.fa-pied-piper-alt::before {
+    content: "";
+}
+.fa-drupal::before {
+    content: "";
+}
+.fa-joomla::before {
+    content: "";
+}
+.fa-language::before {
+    content: "";
+}
+.fa-fax::before {
+    content: "";
+}
+.fa-building::before {
+    content: "";
+}
+.fa-child::before {
+    content: "";
+}
+.fa-paw::before {
+    content: "";
+}
+.fa-spoon::before {
+    content: "";
+}
+.fa-cube::before {
+    content: "";
+}
+.fa-cubes::before {
+    content: "";
+}
+.fa-behance::before {
+    content: "";
+}
+.fa-behance-square::before {
+    content: "";
+}
+.fa-steam::before {
+    content: "";
+}
+.fa-steam-square::before {
+    content: "";
+}
+.fa-recycle::before {
+    content: "";
+}
+.fa-automobile::before, .fa-car::before {
+    content: "";
+}
+.fa-cab::before, .fa-taxi::before {
+    content: "";
+}
+.fa-tree::before {
+    content: "";
+}
+.fa-spotify::before {
+    content: "";
+}
+.fa-deviantart::before {
+    content: "";
+}
+.fa-soundcloud::before {
+    content: "";
+}
+.fa-database::before {
+    content: "";
+}
+.fa-file-pdf-o::before {
+    content: "";
+}
+.fa-file-word-o::before {
+    content: "";
+}
+.fa-file-excel-o::before {
+    content: "";
+}
+.fa-file-powerpoint-o::before {
+    content: "";
+}
+.fa-file-photo-o::before, .fa-file-picture-o::before, .fa-file-image-o::before {
+    content: "";
+}
+.fa-file-zip-o::before, .fa-file-archive-o::before {
+    content: "";
+}
+.fa-file-sound-o::before, .fa-file-audio-o::before {
+    content: "";
+}
+.fa-file-movie-o::before, .fa-file-video-o::before {
+    content: "";
+}
+.fa-file-code-o::before {
+    content: "";
+}
+.fa-vine::before {
+    content: "";
+}
+.fa-codepen::before {
+    content: "";
+}
+.fa-jsfiddle::before {
+    content: "";
+}
+.fa-life-bouy::before, .fa-life-buoy::before, .fa-life-saver::before, .fa-support::before, .fa-life-ring::before {
+    content: "";
+}
+.fa-circle-o-notch::before {
+    content: "";
+}
+.fa-ra::before, .fa-rebel::before {
+    content: "";
+}
+.fa-ge::before, .fa-empire::before {
+    content: "";
+}
+.fa-git-square::before {
+    content: "";
+}
+.fa-git::before {
+    content: "";
+}
+.fa-hacker-news::before {
+    content: "";
+}
+.fa-tencent-weibo::before {
+    content: "";
+}
+.fa-qq::before {
+    content: "";
+}
+.fa-wechat::before, .fa-weixin::before {
+    content: "";
+}
+.fa-send::before, .fa-paper-plane::before {
+    content: "";
+}
+.fa-send-o::before, .fa-paper-plane-o::before {
+    content: "";
+}
+.fa-history::before {
+    content: "";
+}
+.fa-circle-thin::before {
+    content: "";
+}
+.fa-header::before {
+    content: "";
+}
+.fa-paragraph::before {
+    content: "";
+}
+.fa-sliders::before {
+    content: "";
+}
+.fa-share-alt::before {
+    content: "";
+}
+.fa-share-alt-square::before {
+    content: "";
+}
+.fa-bomb::before {
+    content: "";
+}
+.fa-soccer-ball-o::before, .fa-futbol-o::before {
+    content: "";
+}
+.fa-tty::before {
+    content: "";
+}
+.fa-binoculars::before {
+    content: "";
+}
+.fa-plug::before {
+    content: "";
+}
+.fa-slideshare::before {
+    content: "";
+}
+.fa-twitch::before {
+    content: "";
+}
+.fa-yelp::before {
+    content: "";
+}
+.fa-newspaper-o::before {
+    content: "";
+}
+.fa-wifi::before {
+    content: "";
+}
+.fa-calculator::before {
+    content: "";
+}
+.fa-paypal::before {
+    content: "";
+}
+.fa-google-wallet::before {
+    content: "";
+}
+.fa-cc-visa::before {
+    content: "";
+}
+.fa-cc-mastercard::before {
+    content: "";
+}
+.fa-cc-discover::before {
+    content: "";
+}
+.fa-cc-amex::before {
+    content: "";
+}
+.fa-cc-paypal::before {
+    content: "";
+}
+.fa-cc-stripe::before {
+    content: "";
+}
+.fa-bell-slash::before {
+    content: "";
+}
+.fa-bell-slash-o::before {
+    content: "";
+}
+.fa-trash::before {
+    content: "";
+}
+.fa-copyright::before {
+    content: "";
+}
+.fa-at::before {
+    content: "";
+}
+.fa-eyedropper::before {
+    content: "";
+}
+.fa-paint-brush::before {
+    content: "";
+}
+.fa-birthday-cake::before {
+    content: "";
+}
+.fa-area-chart::before {
+    content: "";
+}
+.fa-pie-chart::before {
+    content: "";
+}
+.fa-line-chart::before {
+    content: "";
+}
+.fa-lastfm::before {
+    content: "";
+}
+.fa-lastfm-square::before {
+    content: "";
+}
+.fa-toggle-off::before {
+    content: "";
+}
+.fa-toggle-on::before {
+    content: "";
+}
+.fa-bicycle::before {
+    content: "";
+}
+.fa-bus::before {
+    content: "";
+}
+.fa-ioxhost::before {
+    content: "";
+}
+.fa-angellist::before {
+    content: "";
+}
+.fa-cc::before {
+    content: "";
+}
+.fa-shekel::before, .fa-sheqel::before, .fa-ils::before {
+    content: "";
+}
+.fa-meanpath::before {
+    content: "";
+}
+.mejs-offscreen {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+}
+.mejs-container {
+    background: #000 none repeat scroll 0 0;
+    font-family: Helvetica,Arial;
+    position: relative;
+    text-align: left;
+    text-indent: 0;
+    vertical-align: top;
+}
+.mejs-container:focus {
+    outline: 0 none;
+}
+.me-plugin {
+    position: absolute;
+}
+.mejs-embed, .mejs-embed body {
+    background: #000 none repeat scroll 0 0;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+}
+.mejs-fullscreen {
+    overflow: hidden !important;
+}
+.mejs-container-fullscreen {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+.mejs-container-fullscreen .mejs-mediaelement, .mejs-container-fullscreen video {
+    height: 100%;
+    width: 100%;
+}
+.mejs-clear {
+    clear: both;
+}
+.mejs-background {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.mejs-mediaelement {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.mejs-poster {
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+:root .mejs-poster img {
+    display: none;
+}
+.mejs-poster img {
+    border: 0 none;
+    padding: 0;
+}
+.mejs-overlay {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.mejs-overlay-play {
+    cursor: pointer;
+}
+.mejs-overlay-button {
+    background: rgba(0, 0, 0, 0) url("bigplay.svg") no-repeat scroll 0 0;
+    height: 100px;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    position: absolute;
+    top: 50%;
+    width: 100px;
+}
+.no-svg .mejs-overlay-button {
+    background-image: url("bigplay.png");
+}
+.mejs-overlay:hover .mejs-overlay-button {
+    background-position: 0 -100px;
+}
+.mejs-overlay-loading {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(50, 50, 50, 0.9), rgba(0, 0, 0, 0.9)) repeat scroll 0 0;
+    height: 80px;
+    left: 50%;
+    margin: -40px 0 0 -40px;
+    position: absolute;
+    top: 50%;
+    width: 80px;
+}
+.mejs-overlay-loading span {
+    background: transparent url("loading.gif") no-repeat scroll 50% 50%;
+    display: block;
+    height: 80px;
+    width: 80px;
+}
+.mejs-container .mejs-controls {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7)) repeat scroll 0 0;
+    bottom: 0;
+    height: 30px;
+    left: 0;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+.mejs-container .mejs-controls div {
+    background-image: none;
+    border: 0 none;
+    display: block;
+    float: left;
+    font-family: Helvetica,Arial;
+    font-size: 11px;
+    height: 26px;
+    line-height: 11px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 26px;
+}
+.mejs-controls .mejs-button button {
+    background: transparent url("controls.svg") no-repeat scroll 0 0;
+    border: 0 none;
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    height: 16px;
+    line-height: 0;
+    margin: 7px 5px;
+    padding: 0;
+    position: absolute;
+    text-decoration: none;
+    width: 16px;
+}
+.no-svg .mejs-controls .mejs-button button {
+    background-image: url("controls.png");
+}
+.mejs-controls .mejs-button button:focus {
+    outline: 1px dotted #999;
+}
+.mejs-container .mejs-controls .mejs-time {
+    box-sizing: content-box;
+    color: #fff;
+    display: block;
+    height: 17px;
+    overflow: hidden;
+    padding: 10px 3px 0;
+    text-align: center;
+    width: auto;
+}
+.mejs-container .mejs-controls .mejs-time a {
+    color: #fff;
+    display: block;
+    float: left;
+    font-size: 11px;
+    line-height: 12px;
+    margin: 1px 2px 0 0;
+    width: auto;
+}
+.mejs-controls .mejs-play button {
+    background-position: 0 0;
+}
+.mejs-controls .mejs-pause button {
+    background-position: 0 -16px;
+}
+.mejs-controls .mejs-stop button {
+    background-position: -112px 0;
+}
+.mejs-controls div.mejs-time-rail {
+    direction: ltr;
+    padding-top: 5px;
+    width: 200px;
+}
+.mejs-controls .mejs-time-rail span, .mejs-controls .mejs-time-rail a {
+    border-radius: 2px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 180px;
+}
+.mejs-controls .mejs-time-rail .mejs-time-total {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8)) repeat scroll 0 0;
+    margin: 5px;
+}
+.mejs-controls .mejs-time-rail .mejs-time-buffering {
+    animation: 2s linear 0s normal none infinite running buffering-stripes;
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-size: 15px 15px;
+    width: 100%;
+}
+@keyframes buffering-stripes {
+0% {
+    background-position: 0 0;
+}
+100% {
+    background-position: 30px 0;
+}
+}
+@keyframes buffering-stripes {
+0% {
+    background-position: 0 0;
+}
+100% {
+    background-position: 30px 0;
+}
+}
+.mejs-controls .mejs-time-rail .mejs-time-loaded {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(44, 124, 145, 0.8), rgba(78, 183, 212, 0.8)) repeat scroll 0 0;
+    width: 0;
+}
+.mejs-controls .mejs-time-rail .mejs-time-current {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8)) repeat scroll 0 0;
+    width: 0;
+}
+.mejs-controls .mejs-time-rail .mejs-time-handle {
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    top: -2px;
+    width: 10px;
+}
+.mejs-controls .mejs-time-rail .mejs-time-float {
+    background: #eee none repeat scroll 0 0;
+    border: 1px solid #333;
+    color: #111;
+    display: none;
+    height: 17px;
+    margin-left: -18px;
+    position: absolute;
+    text-align: center;
+    top: -26px;
+    width: 36px;
+}
+.mejs-controls .mejs-time-rail .mejs-time-float-current {
+    display: block;
+    left: 0;
+    margin: 2px;
+    text-align: center;
+    width: 30px;
+}
+.mejs-controls .mejs-time-rail .mejs-time-float-corner {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #eee transparent transparent;
+    border-image: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 5px;
+    display: block;
+    height: 0;
+    left: 13px;
+    line-height: 0;
+    position: absolute;
+    top: 15px;
+    width: 0;
+}
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float {
+    width: 48px;
+}
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-current {
+    width: 44px;
+}
+.mejs-long-video .mejs-controls .mejs-time-rail .mejs-time-float-corner {
+    left: 18px;
+}
+.mejs-controls .mejs-fullscreen-button button {
+    background-position: -32px 0;
+}
+.mejs-controls .mejs-unfullscreen button {
+    background-position: -32px -16px;
+}
+.mejs-controls .mejs-mute button {
+    background-position: -16px -16px;
+}
+.mejs-controls .mejs-unmute button {
+    background-position: -16px 0;
+}
+.mejs-controls .mejs-volume-button {
+    position: relative;
+}
+.mejs-controls .mejs-volume-button .mejs-volume-slider {
+    background: rgba(50, 50, 50, 0.7) none repeat scroll 0 0;
+    border-radius: 0;
+    display: none;
+    height: 115px;
+    left: 0;
+    margin: 0;
+    position: absolute;
+    top: -115px;
+    width: 25px;
+    z-index: 1;
+}
+.mejs-controls .mejs-volume-button:hover {
+    border-radius: 0 0 4px 4px;
+}
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
+    background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;
+    height: 100px;
+    left: 11px;
+    margin: 0;
+    position: absolute;
+    top: 8px;
+    width: 2px;
+}
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
+    background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
+    height: 100px;
+    left: 11px;
+    margin: 0;
+    position: absolute;
+    top: 8px;
+    width: 2px;
+}
+.mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
+    background: rgba(255, 255, 255, 0.9) none repeat scroll 0 0;
+    border-radius: 1px;
+    cursor: n-resize;
+    height: 6px;
+    left: 4px;
+    margin: 0;
+    position: absolute;
+    top: -3px;
+    width: 16px;
+}
+.mejs-controls a.mejs-horizontal-volume-slider {
+    display: block;
+    float: left;
+    height: 26px;
+    position: relative;
+    vertical-align: middle;
+    width: 56px;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(30, 30, 30, 0.8), rgba(60, 60, 60, 0.8)) repeat scroll 0 0;
+    border-radius: 2px;
+    font-size: 1px;
+    height: 8px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 11px;
+    width: 50px;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(255, 255, 255, 0.9), rgba(200, 200, 200, 0.8)) repeat scroll 0 0;
+    border-radius: 2px;
+    font-size: 1px;
+    height: 8px;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 11px;
+    width: 50px;
+}
+.mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-handle {
+    display: none;
+}
+.mejs-controls .mejs-captions-button {
+    position: relative;
+}
+.mejs-controls .mejs-captions-button button {
+    background-position: -48px 0;
+}
+.mejs-controls .mejs-captions-button .mejs-captions-selector {
+    background: rgba(50, 50, 50, 0.7) none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 0;
+    bottom: 26px;
+    height: 100px;
+    overflow: hidden;
+    padding: 10px 10px 0;
+    position: absolute;
+    right: -51px;
+    visibility: hidden;
+    width: 85px;
+}
+.mejs-controls .mejs-captions-button:hover .mejs-captions-selector {
+    visibility: visible;
+}
+.mejs-controls .mejs-captions-button .mejs-captions-selector ul {
+    display: block;
+    list-style-type: none !important;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.mejs-controls .mejs-captions-button .mejs-captions-selector ul li {
+    color: #fff;
+    display: block;
+    list-style-type: none !important;
+    margin: 0 0 6px;
+    overflow: hidden;
+    padding: 0;
+}
+.mejs-controls .mejs-captions-button .mejs-captions-selector ul li input {
+    clear: both;
+    float: left;
+    margin: 3px 3px 0 5px;
+}
+.mejs-controls .mejs-captions-button .mejs-captions-selector ul li label {
+    float: left;
+    font-family: helvetica,arial;
+    font-size: 10px;
+    line-height: 15px;
+    padding: 4px 0 0;
+    width: 55px;
+}
+.mejs-controls .mejs-captions-button .mejs-captions-translations {
+    font-size: 10px;
+    margin: 0 0 5px;
+}
+.mejs-chapters {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 10000px;
+    z-index: 1;
+}
+.mejs-chapters .mejs-chapter {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(50, 50, 50, 0.7), rgba(0, 0, 0, 0.7)) repeat scroll 0 0;
+    border: 0 none;
+    float: left;
+    overflow: hidden;
+    position: absolute;
+}
+.mejs-chapters .mejs-chapter .mejs-chapter-block {
+    border-bottom: 1px solid #333;
+    border-right: 1px solid #333;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 11px;
+    padding: 5px;
+}
+.mejs-chapters .mejs-chapter .mejs-chapter-block-last {
+    border-right: 0 none;
+}
+.mejs-chapters .mejs-chapter .mejs-chapter-block:hover {
+    background: rgba(0, 0, 0, 0) linear-gradient(rgba(102, 102, 102, 0.7), rgba(50, 50, 50, 0.6)) repeat scroll 0 0;
+}
+.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-title {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    margin: 0 0 3px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mejs-chapters .mejs-chapter .mejs-chapter-block .ch-timespan {
+    display: block;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 3px 0 4px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mejs-captions-layer {
+    bottom: 0;
+    color: #fff;
+    font-size: 16px;
+    left: 0;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+}
+.mejs-captions-layer a {
+    color: #fff;
+    text-decoration: underline;
+}
+.mejs-captions-layer[lang="ar"] {
+    font-size: 20px;
+    font-weight: 400;
+}
+.mejs-captions-position {
+    bottom: 15px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+.mejs-captions-position-hover {
+    bottom: 35px;
+}
+.mejs-captions-text {
+    background: rgba(20, 20, 20, 0.5) none repeat scroll 0 0;
+    padding: 3px 5px;
+    white-space: pre-wrap;
+}
+.me-cannotplay a {
+    color: #fff;
+    font-weight: 700;
+}
+.me-cannotplay span {
+    display: block;
+    padding: 15px;
+}
+.mejs-controls .mejs-loop-off button {
+    background-position: -64px -16px;
+}
+.mejs-controls .mejs-loop-on button {
+    background-position: -64px 0;
+}
+.mejs-controls .mejs-backlight-off button {
+    background-position: -80px -16px;
+}
+.mejs-controls .mejs-backlight-on button {
+    background-position: -80px 0;
+}
+.mejs-controls .mejs-picturecontrols-button {
+    background-position: -96px 0;
+}
+.mejs-contextmenu {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #999;
+    border-radius: 4px;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    width: 150px;
+    z-index: 1001;
+}
+.mejs-contextmenu .mejs-contextmenu-separator {
+    background: #333 none repeat scroll 0 0;
+    font-size: 0;
+    height: 1px;
+    margin: 5px 6px;
+}
+.mejs-contextmenu .mejs-contextmenu-item {
+    color: #333;
+    cursor: pointer;
+    font-family: Helvetica,Arial;
+    font-size: 12px;
+    padding: 4px 6px;
+}
+.mejs-contextmenu .mejs-contextmenu-item:hover {
+    background: #2c7c91 none repeat scroll 0 0;
+    color: #fff;
+}
+.mejs-controls .mejs-sourcechooser-button {
+    position: relative;
+}
+.mejs-controls .mejs-sourcechooser-button button {
+    background-position: -128px 0;
+}
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector {
+    background: rgba(50, 50, 50, 0.7) none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 0;
+    bottom: 26px;
+    height: 100px;
+    overflow: hidden;
+    padding: 10px;
+    position: absolute;
+    right: -10px;
+    visibility: hidden;
+    width: 130px;
+}
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul {
+    display: block;
+    list-style-type: none !important;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li {
+    color: #fff;
+    display: block;
+    list-style-type: none !important;
+    margin: 0 0 6px;
+    overflow: hidden;
+    padding: 0;
+}
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li input {
+    clear: both;
+    float: left;
+    margin: 3px 3px 0 5px;
+}
+.mejs-controls .mejs-sourcechooser-button .mejs-sourcechooser-selector ul li label {
+    float: left;
+    font-family: helvetica,arial;
+    font-size: 10px;
+    line-height: 15px;
+    padding: 4px 0 0;
+    width: 100px;
+}
+.mejs-postroll-layer {
+    background: rgba(50, 50, 50, 0.7) none repeat scroll 0 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+}
+.mejs-postroll-layer-content {
+    height: 100%;
+    width: 100%;
+}
+.mejs-postroll-close {
+    background: rgba(50, 50, 50, 0.7) none repeat scroll 0 0;
+    color: #fff;
+    cursor: pointer;
+    padding: 4px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 100;
+}
+div.mejs-speed-button {
+    position: relative;
+    width: 46px !important;
+}
+.mejs-controls .mejs-button.mejs-speed-button button {
+    background: transparent none repeat scroll 0 0;
+    color: #fff;
+    font-size: 11px;
+    line-height: normal;
+    width: 36px;
+}
+.mejs-controls .mejs-speed-button .mejs-speed-selector {
+    background: rgba(50, 50, 50, 0.7) none repeat scroll 0 0;
+    border: 1px solid transparent;
+    border-radius: 0;
+    display: none;
+    height: 100px;
+    left: -10px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    top: -100px;
+    width: 60px;
+}
+.mejs-controls .mejs-speed-button:hover > .mejs-speed-selector {
+    display: block;
+}
+.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label.mejs-speed-selected {
+    color: #21f8f8;
+}
+.mejs-controls .mejs-speed-button .mejs-speed-selector ul {
+    display: block;
+    list-style-type: none !important;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+.mejs-controls .mejs-speed-button .mejs-speed-selector ul li {
+    color: #fff;
+    display: block;
+    list-style-type: none !important;
+    margin: 0 0 6px;
+    overflow: hidden;
+    padding: 0 10px;
+}
+.mejs-controls .mejs-speed-button .mejs-speed-selector ul li input {
+    clear: both;
+    display: none;
+    float: left;
+    margin: 3px 3px 0 5px;
+}
+.mejs-controls .mejs-speed-button .mejs-speed-selector ul li label {
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-family: helvetica,arial;
+    font-size: 11.5px;
+    line-height: 15px;
+    margin-left: 5px;
+    padding: 4px 0 0;
+    width: 60px;
+}
+.mejs-controls .mejs-speed-button .mejs-speed-selector ul li:hover {
+    background-color: rgba(255, 255, 255, 0.4) !important;
+}
+.mejs-controls .mejs-button.mejs-jump-forward-button {
+    background: transparent url("jumpforward.png") no-repeat scroll 3px 3px;
+}
+.mejs-controls .mejs-button.mejs-jump-forward-button button {
+    background: transparent none repeat scroll 0 0;
+    color: #fff;
+    font-size: 9px;
+    line-height: normal;
+}
+.mejs-controls .mejs-button.mejs-skip-back-button {
+    background: transparent url("skipback.png") no-repeat scroll 3px 3px;
+}
+.mejs-controls .mejs-button.mejs-skip-back-button button {
+    background: transparent none repeat scroll 0 0;
+    color: #fff;
+    font-size: 9px;
+    line-height: normal;
+}
+.moto-widget-audio_player .moto-widget-audio_player-container {
+    height: 42px;
+}
+.moto-widget-audio_player .mejs-time {
+    white-space: nowrap;
+}
+.moto-widget-audio_player .mejs-time span {
+    display: inline-block;
+    position: relative;
+    width: auto;
+}
+.moto-widget-audio_player .mejs-controls .mejs-button button {
+    height: 100%;
+    width: 41px;
+}
+.moto-widget-audio_player .mejs-container {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    height: 100%;
+}
+.moto-widget-audio_player .mejs-controls {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid;
+    border-radius: 3px;
+    height: 100%;
+    min-width: 346px;
+    overflow: hidden;
+    top: 0;
+}
+@media screen and (max-width: 1039px) {
+.moto-widget-audio_player .mejs-controls {
+    min-width: 218px;
+}
+}
+.moto-widget-audio_player .mejs-controls div {
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+.moto-widget-audio_player .mejs-controls > div {
+    border-color: inherit;
+    border-left-style: solid;
+    border-left-width: 1px;
+    display: inline-block;
+    float: none;
+}
+.moto-widget-audio_player .mejs-controls > div:first-child {
+    border: medium none;
+}
+.moto-widget-audio_player .mejs-controls .mejs-button {
+    height: 100%;
+    position: relative;
+    width: 41px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-button button {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    color: #d3d8db;
+    margin: 0;
+    padding: 0;
+}
+.moto-widget-audio_player .mejs-controls .mejs-button button::before {
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font: 19px/1 FontAwesome;
+    position: relative;
+    text-rendering: auto;
+    transition: all 0.5s ease 0s;
+    width: 100%;
+}
+.moto-widget-audio_player .mejs-controls .mejs-button button:hover {
+    color: #81868c;
+}
+.moto-widget-audio_player .mejs-controls .mejs-button.mejs-play button::before {
+    content: "";
+}
+.moto-widget-audio_player .mejs-controls .mejs-button.mejs-pause button::before {
+    content: "";
+}
+.moto-widget-audio_player .mejs-controls .mejs-button.mejs-stop button::before {
+    content: "";
+}
+.moto-widget-audio_player .mejs-controls .mejs-time-rail {
+    height: 100%;
+    padding: 0 10px;
+    position: relative;
+}
+.moto-widget-audio_player .mejs-controls .mejs-time-rail div.mejs-moto-track-name {
+    background: transparent none repeat scroll 0 0;
+    height: 22px;
+    left: 10px;
+    overflow: hidden;
+    padding-top: 6px;
+    position: absolute;
+    right: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: auto;
+}
+.moto-widget-audio_player .mejs-controls .mejs-spacer {
+    width: 10px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-time {
+    color: inherit;
+    height: 0;
+    overflow: visible;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-time span {
+    cursor: default;
+    padding-left: 3px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-volume-button {
+    width: 130px;
+}
+@media screen and (max-width: 1039px) {
+.moto-widget-audio_player .mejs-controls .mejs-volume-button {
+    display: none !important;
+}
+}
+.moto-widget-audio_player .mejs-controls .mejs-volume-button button {
+    width: 41px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-volume-button .mejs-horizontal-volume-slider {
+    display: block !important;
+    height: 100%;
+    left: 41px;
+    width: 80px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-volume-button .mejs-horizontal-volume-total, .moto-widget-audio_player .mejs-controls .mejs-volume-button .mejs-horizontal-volume-current {
+    top: 17px;
+    width: 80px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-volume-button .mejs-horizontal-volume-handle {
+    top: 13px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-horizontal-volume-slider div.mejs-horizontal-volume-handle, .moto-widget-audio_player .mejs-controls .mejs-time-handle {
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-sizing: content-box;
+    cursor: pointer;
+    display: block;
+    height: 6px;
+    left: -7px;
+    position: relative;
+    text-align: center;
+    width: 6px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-horizontal-volume-handle {
+    margin-left: -5px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-time-handle {
+    top: -4px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-time-total {
+    background: #d0d1d5 none repeat scroll 0 0;
+    bottom: 7px;
+    margin: 0;
+}
+.moto-widget-audio_player .mejs-controls .mejs-time-loaded, .moto-widget-audio_player .mejs-controls .mejs-horizontal-volume-total {
+    background: #bfc3c6 none repeat scroll 0 0;
+}
+.moto-widget-audio_player .mejs-controls .mejs-time-current, .moto-widget-audio_player .mejs-controls .mejs-horizontal-volume-current {
+    background: #7f878a none repeat scroll 0 0;
+}
+.moto-widget-audio_player .mejs-controls .mejs-time-total, .moto-widget-audio_player .mejs-controls .mejs-time-loaded, .moto-widget-audio_player .mejs-controls .mejs-time-current, .moto-widget-audio_player .mejs-controls .mejs-horizontal-volume-total, .moto-widget-audio_player .mejs-controls .mejs-horizontal-volume-current {
+    border-radius: 5px;
+    height: 6px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-moto-loop-button button::before {
+    content: "";
+    top: -1px;
+}
+.moto-widget-audio_player .mejs-controls .mejs-moto-last-hidden-button {
+    border: medium none;
+    width: 0;
+}
+.moto-widget-audio_player .mejs-inner .mejs-controls .mejs-button.mejs-button_active button:hover {
+    background-color: inherit;
+}
+.moto-widget-audio_player .mejs-inner .mejs-controls .mejs-button.mejs-button_active button:hover::before {
+    color: inherit;
+}
+.moto-widget-audio_player .mejs-inner .mejs-controls .mejs-button.mejs-volume-button button {
+    background-color: inherit;
+}
+.moto-widget-audio_player .mejs-inner .mejs-controls .mejs-button.mejs-volume-button button:hover {
+    background-color: inherit;
+}
+.moto-widget-audio_player .mejs-time-total, .moto-widget-audio_player .mejs-button button:focus {
+    outline: 0 none;
+}
+.moto-widget-audio_player .mejs-time-rail .mejs-time-float {
+    background: #55616d none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 3px;
+    color: #d3d8db;
+    height: 14px;
+    margin-left: -18px;
+    top: -23px;
+    width: auto;
+    z-index: 50;
+}
+.moto-widget-audio_player .mejs-time-rail .mejs-time-float-current {
+    font: 11px Tahoma,sans-serif;
+    margin: 0;
+    padding: 0 4px;
+    position: relative;
+    width: auto;
+}
+.moto-widget-audio_player .mejs-time-rail .mejs-time-float-corner {
+    border-color: #55616d transparent transparent;
+    left: 13px;
+    top: 12px;
+}
+.moto-widget-audio_player .mejs-mute button::before {
+    content: "";
+}
+.moto-widget-audio_player .mejs-unmute button::before {
+    content: "";
+    right: 5px;
+}
+.moto-widget-audio_player .mejs-container audio {
+    display: block;
+}
+.moto-widget-audio_player audio {
+    display: none;
+}

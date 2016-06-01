@@ -55,7 +55,7 @@ ROOT_URLCONF = 'linkedincareer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['career_site/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -96,7 +96,7 @@
                                 <ul class="moto-widget-menu-list moto-widget-menu-list_horizontal">
                                     <li class="moto-widget-menu-item">
                                         <a href="/" data-action="page"
-                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-submenu moto-widget-menu-link-active moto-link">Home<span
+                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-submenu moto-link {% if request.path == index_url %} moto-widget-menu-link-active {% endif %}">Home<span
                                                 class="fa moto-widget-menu-link-arrow"></span></a>
                                         <ul class="moto-widget-menu-sublist">
                                             <li class="moto-widget-menu-item">
@@ -116,19 +116,19 @@
                                     </li>
                                     <li class="moto-widget-menu-item">
                                         <a href="/about/" data-action="page"
-                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">About</a>
+                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link {% if request.path == about_url %} moto-widget-menu-link-active {% endif %}">About</a>
                                     </li>
                                     <li class="moto-widget-menu-item">
                                         <a href="/services/" data-action="page"
-                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Services</a>
+                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link {% if request.path == services_url %} moto-widget-menu-link-active {% endif %}">Services</a>
                                     </li>
                                     <li class="moto-widget-menu-item">
                                         <a href="/news/" data-action="page"
-                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">News</a>
+                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link {% if request.path == news_url %} moto-widget-menu-link-active {% endif %}">News</a>
                                     </li>
                                     <li class="moto-widget-menu-item">
                                         <a href="/contact/" data-action="page"
-                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Contact</a>
+                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link {% if request.path == contact_url %} moto-widget-menu-link-active {% endif %}">Contact</a>
                                     </li>
                                 </ul>
                             </div>

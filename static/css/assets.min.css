@@ -1650,18 +1650,7 @@
 .mejs-overlay-play {
     cursor: pointer;
 }
-.mejs-overlay-button {
-    background: rgba(0, 0, 0, 0) url("bigplay.svg") no-repeat scroll 0 0;
-    height: 100px;
-    left: 50%;
-    margin: -50px 0 0 -50px;
-    position: absolute;
-    top: 50%;
-    width: 100px;
-}
-.no-svg .mejs-overlay-button {
-    background-image: url("bigplay.png");
-}
+
 .mejs-overlay:hover .mejs-overlay-button {
     background-position: 0 -100px;
 }
@@ -1672,12 +1661,6 @@
     margin: -40px 0 0 -40px;
     position: absolute;
     top: 50%;
-    width: 80px;
-}
-.mejs-overlay-loading span {
-    background: transparent url("loading.gif") no-repeat scroll 50% 50%;
-    display: block;
-    height: 80px;
     width: 80px;
 }
 .mejs-container .mejs-controls {
@@ -1704,23 +1687,6 @@
     margin: 0;
     padding: 0;
     width: 26px;
-}
-.mejs-controls .mejs-button button {
-    background: transparent url("controls.svg") no-repeat scroll 0 0;
-    border: 0 none;
-    cursor: pointer;
-    display: block;
-    font-size: 0;
-    height: 16px;
-    line-height: 0;
-    margin: 7px 5px;
-    padding: 0;
-    position: absolute;
-    text-decoration: none;
-    width: 16px;
-}
-.no-svg .mejs-controls .mejs-button button {
-    background-image: url("controls.png");
 }
 .mejs-controls .mejs-button button:focus {
     outline: 1px dotted #999;
@@ -2270,17 +2236,11 @@ div.mejs-speed-button {
 .mejs-controls .mejs-speed-button .mejs-speed-selector ul li:hover {
     background-color: rgba(255, 255, 255, 0.4) !important;
 }
-.mejs-controls .mejs-button.mejs-jump-forward-button {
-    background: transparent url("jumpforward.png") no-repeat scroll 3px 3px;
-}
 .mejs-controls .mejs-button.mejs-jump-forward-button button {
     background: transparent none repeat scroll 0 0;
     color: #fff;
     font-size: 9px;
     line-height: normal;
-}
-.mejs-controls .mejs-button.mejs-skip-back-button {
-    background: transparent url("skipback.png") no-repeat scroll 3px 3px;
 }
 .mejs-controls .mejs-button.mejs-skip-back-button button {
     background: transparent none repeat scroll 0 0;

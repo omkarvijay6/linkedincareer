@@ -65,7 +65,7 @@
                                                  data-preset="default" data-spacing="aama" data-widget="image">
 
 
-                                                <a class="moto-widget-image-link moto-link" href="/" data-action="page">
+                                                <a class="moto-widget-image-link moto-link" href="{% url 'index' %}" data-action="page">
                                                     <img src="{% static 'images/mt-0135-home-logo.png' %}"
                                                          class="moto-widget-image-picture" data-id="303" title="" alt=""
                                                          draggable="false">
@@ -79,7 +79,7 @@
                                                 <div class="moto-widget-text-content moto-widget-text-editable"><p
                                                         class="moto-text_system_1"><a class="moto-link"
                                                                                       data-action="pages" data-id="1"
-                                                                                      href="/">linkedincareers</a><br>
+                                                                                      href="{% url 'index' %}">linkedincareer</a><br>
                                                 </p>
                                                 </div>
                                             </div>
@@ -97,39 +97,42 @@
                                         class="moto-widget-menu-toggle-btn-icon fa fa-bars"></i></a>
                                 <ul class="moto-widget-menu-list moto-widget-menu-list_horizontal">
                                     <li class="moto-widget-menu-item">
-                                        <a href="/" data-action="page"
+                                        <a href="{% url 'index' %}" data-action="page"
                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-widget-menu-link-submenu moto-link {% if request.path == index_url %} moto-widget-menu-link-active {% endif %}">Home<span
                                                 class="fa moto-widget-menu-link-arrow"></span></a>
-                                        <ul class="moto-widget-menu-sublist">
-                                            <li class="moto-widget-menu-item">
-                                                <a href="/about/" data-action="page"
-                                                   class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">About</a>
-                                            </li>
-                                            <li class="moto-widget-menu-item">
-                                                <a href="/services/" data-action="page"
-                                                   class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">Services</a>
-                                            </li>
-                                            <li class="moto-widget-menu-item">
-                                                <a href="/events/" data-action="page"
-                                                   class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">Events</a>
-                                            </li>
-                                        </ul>
-
                                     </li>
                                     <li class="moto-widget-menu-item">
-                                        <a href="/about/" data-action="page"
+                                        <a href="{% url 'about' %}" data-action="page"
                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link {% if request.path == about_url %} moto-widget-menu-link-active {% endif %}">About</a>
                                     </li>
                                     <li class="moto-widget-menu-item">
-                                        <a href="/services/" data-action="page"
-                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link {% if request.path == services_url %} moto-widget-menu-link-active {% endif %}">Services</a>
+                                        <a href="{% url 'services' %}" data-action="page"
+                                           class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link {% if request.path == services_url or right_connect_url %} moto-widget-menu-link-active {% endif %}">Services</a>
+                                        <ul class="moto-widget-menu-sublist">
+                                            <li class="moto-widget-menu-item">
+                                                <a href="{% url 'right_connect' %}" data-action="page"
+                                                   class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">Right Connect</a>
+                                            </li>
+                                            <li class="moto-widget-menu-item">
+                                                <a href="{% url 'services' %}" data-action="page"
+                                                   class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">Professional Resume</a>
+                                            </li>
+                                            <li class="moto-widget-menu-item">
+                                                <a href="/events/" data-action="page"
+                                                   class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">Executive Level Services</a>
+                                            </li>
+                                            <li class="moto-widget-menu-item">
+                                                <a href="/events/" data-action="page"
+                                                   class="moto-widget-menu-link moto-widget-menu-link-level-2 moto-link">Combo Services</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                     <li class="moto-widget-menu-item">
-                                        <a href="/news/" data-action="page"
+                                        <a href="{% url 'news' %}" data-action="page"
                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link {% if request.path == news_url %} moto-widget-menu-link-active {% endif %}">News</a>
                                     </li>
                                     <li class="moto-widget-menu-item">
-                                        <a href="/contact/" data-action="page"
+                                        <a href="{% url 'contact' %}" data-action="page"
                                            class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link {% if request.path == contact_url %} moto-widget-menu-link-active {% endif %}">Contact</a>
                                     </li>
                                 </ul>

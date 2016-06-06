@@ -26,3 +26,8 @@ def news(request):
 def contact(request):
     current_url = request.path
     return render_to_response('contact.html', {'contact_url': current_url}, context_instance=RequestContext(request))
+
+
+def right_connect(request):
+    current_url = request.path
+    return render_to_response('right_connect.html', {'right_connect_url': current_url}, context_instance=RequestContext(request))

@@ -1,6 +1,6 @@
 from django.conf.urls import url
 
-from views import index, about, services, news, contact, right_connect, professional_resume
+from views import index, about, services, news, contact, right_connect, professional_resume, executive_service
 
 urlpatterns = [
     url(r'^$', index, name='index'),
@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^contact/', contact, name='contact'),
     url(r'^right-connect/', right_connect, name='right_connect'),
     url(r'^professional-resume/', professional_resume, name='professional_resume'),
+    url(r'^executive-level-services/', executive_service, name='executive_service'),
 ]

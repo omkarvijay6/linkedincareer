@@ -30,9 +30,17 @@ def contact(request):
 
 def right_connect(request):
     current_url = request.path
-    return render_to_response('right_connect.html', {'right_connect_url': current_url}, context_instance=RequestContext(request))
+    return render_to_response('right_connect.html', {'right_connect_url': current_url},
+                              context_instance=RequestContext(request))
 
 
 def professional_resume(request):
     current_url = request.path
-    return render_to_response('professional_resume.html', {'services_url': current_url}, context_instance=RequestContext(request))
+    return render_to_response('professional_resume.html', {'services_url': current_url},
+                              context_instance=RequestContext(request))
+
+
+def executive_service(request):
+    current_url = request.path
+    return render_to_response('executive_service.html', {'services_url': current_url},
+                              context_instance=RequestContext(request))

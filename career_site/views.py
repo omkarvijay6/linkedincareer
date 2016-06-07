@@ -50,3 +50,9 @@ def combo_services(request):
     current_url = request.path
     return render_to_response('combo_services.html', {'services_url': current_url},
                               context_instance=RequestContext(request))
+
+
+def privacy_policy(request):
+    current_url = request.path
+    return render_to_response('privacy_policy.html', {'privacy_policy': current_url},
+                              context_instance=RequestContext(request))

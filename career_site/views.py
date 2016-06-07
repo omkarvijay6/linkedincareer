@@ -56,3 +56,8 @@ def privacy_policy(request):
     current_url = request.path
     return render_to_response('privacy_policy.html', {'privacy_policy': current_url},
                               context_instance=RequestContext(request))
+
+def t_and_c(request):
+    current_url = request.path
+    return render_to_response('t_and_c.html', {'t_and_c': current_url},
+                              context_instance=RequestContext(request))

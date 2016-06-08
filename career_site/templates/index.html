@@ -256,15 +256,15 @@
                                     class="moto-widget-menu-toggle-btn-icon fa fa-bars"></i></a>
                             <ul class="moto-widget-menu-list moto-widget-menu-list_horizontal">
                                 <li class="moto-widget-menu-item">
-                                    <a href="/about/" data-action="page"
+                                    <a href="{% url 'about' %}" data-action="page"
                                        class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">About</a>
                                 </li>
                                 <li class="moto-widget-menu-item">
-                                    <a href="/services/" data-action="page"
+                                    <a href="{% url 'services' %}" data-action="page"
                                        class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Services</a>
                                 </li>
                                 <li class="moto-widget-menu-item">
-                                    <a href="/events/" data-action="page"
+                                    <a href="{% url 'index' %}" data-action="page"
                                        class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Events</a>
                                 </li>
                             </ul>

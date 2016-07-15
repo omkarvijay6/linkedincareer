@@ -3000,9 +3000,9 @@ img.mfp-img {
 .moto-text_system_4 {
     color: #3b3d3f;
     font-family: Raleway,sans-serif;
-    font-size: 42px;
+    font-size: 35px;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 0;
     line-height: 1.2;
 }
@@ -3042,22 +3042,22 @@ img.mfp-img {
 .moto-text_system_5 {
     color: #3b3d3f;
     font-family: Raleway,sans-serif;
-    font-size: 40px;
+    font-size: 35px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0;
     line-height: 1.2;
 }
 .moto-text_system_5 a {
     color: #3b3d3f;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: underline;
 }
 .moto-text_system_5 a:hover {
     color: #3b3d3f;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
 }
 @media (max-width: 1039px) {
@@ -3084,22 +3084,22 @@ img.mfp-img {
 .moto-text_system_6 {
     color: #ffffff;
     font-family: Raleway,sans-serif;
-    font-size: 31px;
+    font-size: 25px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0;
     line-height: 1.4;
 }
 .moto-text_system_6 a {
     color: #aac117;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
 }
 .moto-text_system_6 a:hover {
     color: #ffffff;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
 }
 @media (max-width: 1039px) {
@@ -5424,7 +5424,7 @@ img.mfp-img {
 }
 }
 .moto-widget-slider .bx-caption span {
-    font-size: 80px;
+    font-size: 50px;
     line-height: 1.1;
 }
 @media screen and (max-width: 1039px) {
@@ -5926,7 +5926,7 @@ img.mfp-img {
     color: #232425;
     font-family: Raleway,sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 500;
     text-decoration: none;
 }
 .moto-widget-slider.moto-preset-default .bx-controls-direction .bx-prev, .moto-widget-slider.moto-preset-default .bx-controls-direction .bx-next {

@@ -1778,16 +1778,16 @@ img.mfp-img {
 }
 .moto-container_content_55e42abb {
     background-color: #f1f2f3;
-    border-color: #fff;
-    border-radius: 0;
-    border-style: none;
-    border-width: 0;
+    border-color: #4c4a4a;
+    border-radius: 10px;
+    border-style: dashed;
+    border-width: 0.1px;
     margin: 0 0 15px;
     padding: 0 10px 20px;
 }
 .moto-container_content_55e42abf {
-    border-color: #f1f2f3;
-    border-radius: 0;
+    border-color: #4c4a4a;
+    border-radius: 0.1px;
     border-style: solid;
     border-width: 2px;
     margin: 0;
@@ -1796,7 +1796,7 @@ img.mfp-img {
 .moto-container_content_55e41e3c {
     background-color: #aac117;
     border-color: #fff;
-    border-radius: 0;
+    border-radius: 10px;
     border-style: none;
     border-width: 0;
     margin: 0;
@@ -4828,7 +4828,7 @@ img.mfp-img {
     transition: all 0.2s ease 0s;
 }
 .moto-widget-button.moto-preset-2 .moto-widget-button-link.moto-size-large {
-    font-size: 21px;
+    font-size: 15px;
     padding: 22px 53px;
 }
 @media screen and (max-width: 1039px) {
@@ -5817,7 +5817,7 @@ img.mfp-img {
     color: #ffffff;
     font-family: Raleway,sans-serif;
     font-style: normal;
-    font-weight: 700;
+    font-weight: 400;
 }
 .moto-widget-button.moto-preset-2 .moto-widget-button-link:hover {
     background-color: transparent;

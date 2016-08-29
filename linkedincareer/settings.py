@@ -58,7 +58,7 @@ ROOT_URLCONF = 'linkedincareer.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['career_site/templates', 'templates/'],
+        'DIRS': ['career_site/templates', 'templates', 'users/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,3 +131,4 @@ STATICFILES_DIRS = [
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
+LOGIN_URL = '/users/login/'

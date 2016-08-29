@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title%}user-login{% endblock %}
+{% block header_nav_links %}{% endblock %}
+{% block content %}
+<section id="section-content" class="content page-17 moto-section" data-widget="section" data-container="section">
+    <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-sm-12" data-container="container">
+                    <div class="moto-widget moto-widget-text moto-preset-default      moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto"
+                         data-widget="text" data-preset="default" data-spacing="lama">
+                        <div class="moto-widget-text-content moto-widget-text-editable"><p
+                                class="moto-text_system_4">please login</p></div>
+                    </div>
+
+                    <div class="moto-widget moto-widget-contact_form moto-preset-default moto-widget-empty moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto ">
+
+                        <form class="moto-widget-contact_form-form" action="." method="post">{% csrf_token %}
+                                <div class="moto-widget-contact_form-group">
+                                    <span class="moto-widget-contact_form-field-error">{{ auth_form.non_field_errors }}</span>
+                                </div>
+
+                            <div class="moto-widget-contact_form-group">
+                                {% if auth_form.username.errors %}
+                                    <span class="moto-widget-contact_form-field-error">{{ auth_form.username.errors }}</span>
+                                {% endif %}
+                                {{auth_form.username}}
+                            </div>
+
+                            <div class="moto-widget-contact_form-group">
+                                {% if auth_form.password.errors %}
+                                    <span class="moto-widget-contact_form-field-error">{{ auth_form.password.errors }}</span>
+                                {% endif %}
+                                {{auth_form.password}}
+                            </div>
+
+                            <div class="moto-widget-contact_form-buttons">
+                                <div class="moto-widget moto-widget-button moto-preset-5 moto-align-left"
+                                     data-preset="5" data-align="left">
+                                    <input type="submit" class="moto-widget-button-link moto-size-large" name="login" value="login">
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="moto-widget moto-widget-row" data-widget="row">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-sm-12" data-container="container">
+                    <div class="moto-widget moto-widget-spacer moto-preset-default" data-widget="spacer"
+                         data-spacing="">
+                        <div class="moto-widget-spacer-block" style="height: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

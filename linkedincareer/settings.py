@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#6g*t)nsx)2#7s@_90r2!q#vsf%#)+&=4cdd)pg!i6^kawh6px'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'sslserver',
 
     'subscription',
 ]
@@ -132,3 +134,13 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 LOGIN_URL = '/users/login/'
+
+MASTERCARD_SECURE_HASH = os.environ.get('MASTERCARD_SECURE_HASH', 'invalid_hash')
+VPC_URL = os.environ.get('VPC_URL', 'invalid_url')
+VPC_ACCESSCODE=os.environ.get('VPC_ACCESSCODE', 'invalid_url')
+VPC_COMMAND=os.environ.get('VPC_COMMAND', 'invalid_command')
+VPC_LOCALE=os.environ.get('VPC_LOCALE', 'invalid_locale')
+VPC_MERCHANT=os.environ.get('VPC_MERCHANT', 'invalid_merchant')
+VPC_RETURN_URL=os.environ.get('VPC_RETURN_URL', 'invalid_url')
+VPC_VERSION=os.environ.get('VPC_VERSION', 'invalid_version')
+VPC_TITLE=os.environ.get('VPC_TITLE', 'invalid_title')

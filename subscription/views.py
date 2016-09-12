@@ -10,7 +10,6 @@ from django.template import RequestContext
 
 def payment_callback(request):
     print "callback recieved"
-    import ipdb;ipdb.set_trace()
     return redirect(reverse('index'))
 
 

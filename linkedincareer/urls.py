@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from payments.views import payment_callback
 
 urlpatterns = [
     url(r'^godzillaroar/', admin.site.urls),
     url(r'^', include('career_site.urls')),
     url(r'^users/', include('users.urls')),
-    url(r'^subscription/', include('subscription.urls')),
+    url(r'^payments/', include('payments.urls')),
+    url(r'^subscription/payment-callback/$', payment_callback, name='payment_callback'),
 
 ]

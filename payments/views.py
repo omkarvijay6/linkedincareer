@@ -11,7 +11,7 @@ def payment_callback(request):
 
 
 @login_required
-def payment(request):
+def redirect_to_payment_gateway(request):
     migs_client = MigsClient()
     encoded_url = migs_client.generate_get_url()
     return redirect(encoded_url)

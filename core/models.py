@@ -17,3 +17,21 @@ class TimeStampedModel(models.Model):
 
     class Meta:
         abstract = True
+
+
+class Service(models.Model):
+    """
+    service type defines the type of a service
+    ex: resume writing, right connect etc
+    nk:
+    RC -> Right Connect
+    PR -> Professional Services
+    CS -> Combo Services
+    ELS -> Executive Level Services
+    """
+    nk = models.CharField(max_length=30, unique=True)
+    name = models.CharField(max_length=255)
+    description = models.TextField(null=True, blank=True)
+
+    def __unicode__(self):
+        return self.name

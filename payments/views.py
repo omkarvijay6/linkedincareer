@@ -1,10 +1,11 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import redirect, render_to_response
+from django.http import HttpResponseRedirect
+from django.shortcuts import redirect
+from django.core.urlresolvers import reverse
 
 # Create your views here.
-from django.template import RequestContext
 from payments.enums import StatusChoices
-from payments.services import get_payment_gateway_url, update_user_payment, validate_payment_payload
+from payments.services import get_payment_gateway_url, update_user_payment, validate_payment_payload, get_service
 
 
 def payment_callback(request):
@@ -13,19 +14,18 @@ def payment_callback(request):
     secure_is_valid = validate_payment_payload(payment_payload)
     if secure_is_valid:
         payment = update_user_payment(user, payment_payload)
-        if payment.status == StatusChoices.approved.value:
-            payment_template = 'payment_receipt.html'
+        if payment.status == StatusChoices.successful.value:
+            redirect_url = reverse('payment_successful')
         else:
-            payment_template = 'payment_receipt.html'
-        return render_to_response(payment_template, {'payment': payment},
-                                  context_instance=RequestContext(request))
+            redirect_url = reverse('payment_failed')
     else:
-        return render_to_response('payment_forbidden.html', {},
-                                  context_instance=RequestContext(request))
+        redirect_url = reverse('forbidden')
+    return HttpResponseRedirect(redirect_url)
 
 
 @login_required
-def redirect_to_payment_gateway(request, amount):
+def redirect_to_payment_gateway(request, amount, service_nk, country_code=None):
     user = request.user
-    payment_gateway_url = get_payment_gateway_url(user, amount)
+    service = get_service(service_nk)
+    payment_gateway_url = get_payment_gateway_url(user, amount, service, country_code)
     return redirect(payment_gateway_url)

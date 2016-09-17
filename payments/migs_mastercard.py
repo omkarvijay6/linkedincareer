@@ -1,13 +1,16 @@
+from abc import abstractmethod
 from django.conf import settings
 import hashlib
 import urllib
 
 
 class MigsClient(object):
-    def __init__(self):
+    def __init__(self, merchant_transaction_ref, amount):
         self.secure_secret = settings.MASTERCARD_SECURE_HASH
         self.vpcURL = settings.VPC_URL
         self.payload = {}
+        self.merchant_transaction_ref = merchant_transaction_ref
+        self.amount = amount
 
     def hash_all_fields(self, fields):
         buf = ""
@@ -75,12 +78,12 @@ class MigsClient(object):
 
     def generate_payload(self):
         return {'Title': settings.VPC_TITLE, 'vpc_AccessCode': settings.VPC_ACCESSCODE,
-                   'vpc_Amount': '100', 'vpc_Command': settings.VPC_COMMAND, 'vpc_Locale': 'en',
-                   'vpc_MerchTxnRef': 'ORDER958743-1', 'vpc_Merchant': settings.VPC_MERCHANT,
+                   'vpc_Amount': "100", 'vpc_Command': settings.VPC_COMMAND, 'vpc_Locale': settings.VPC_LOCALE,
+                   'vpc_MerchTxnRef': self.merchant_transaction_ref, 'vpc_Merchant': settings.VPC_MERCHANT,
                    'vpc_OrderInfo': 'VPC Example', 'vpc_ReturnURL': settings.VPC_RETURN_URL,
                    'vpc_Version': settings.VPC_VERSION
                }
 
-    def generate_get_url(self):
+    def generate_payment_url(self):
         payload = self.generate_payload()
         return self.setup(payload)

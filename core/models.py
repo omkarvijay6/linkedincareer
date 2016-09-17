@@ -27,7 +27,7 @@ class Service(models.Model):
     RC -> Right Connect
     PR -> Professional Services
     CS -> Combo Services
-    ELS -> Executive Level Services
+    ES -> Executive Level Services
     """
     nk = models.CharField(max_length=30, unique=True)
     name = models.CharField(max_length=255)

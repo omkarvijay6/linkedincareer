@@ -5,7 +5,7 @@ from django.conf import settings
 
 # Create your models here.
 from payments.card_types import CREDIT_CARD_TYPES
-from payments.services import generate_unique_merch_txn_ref
+from payments.enums import StatusChoices
 
 
 class TimeStampedModel(models.Model):
@@ -30,7 +30,7 @@ class Order(TimeStampedModel):
     merch_txn_ref: Unique Merchant Transaction Reference number which is sent to the
     payment server which checkout
     """
-    name = models.CharField(max_length=255)
+    title = models.CharField(max_length=255)
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     merch_txn_ref = models.CharField(unique=True, max_length=40, help_text="Merchant Transaction Reference")
 
@@ -39,11 +39,12 @@ class Order(TimeStampedModel):
         override save method to create an unique merchant transaction reference
         """
         if self.pk is None:
+            from payments.services import generate_unique_merch_txn_ref
             self.merch_txn_ref = generate_unique_merch_txn_ref()
         super(Order, self).save(*args, **kwargs)
 
     def __unicode__(self):
-        return self.name
+        return self.merch_txn_ref
 
 
 class Payment(TimeStampedModel):
@@ -57,22 +58,18 @@ class Payment(TimeStampedModel):
     """
     batch_scheduled_date = models.DateField(blank=True, null=True)
 
-    PENDING = 'PENDING'
-    REJECTED = 'REJECTED'
-    APPROVED = 'APPROVED'
     STATUS_CHOICES = (
-        (PENDING, 'PENDING'),
-        (REJECTED, 'REJECTED'),
-        (APPROVED, 'APPROVED'),
+        (StatusChoices.pending.value, 'PENDING'),
+        (StatusChoices.failed.value, 'FAILED'),
+        (StatusChoices.approved.value, 'APPROVED'),
     )
-    status = models.CharField(choices=STATUS_CHOICES, max_length=8, default=PENDING)
+    status = models.CharField(choices=STATUS_CHOICES, max_length=1, default=StatusChoices.pending.value)
     status_message = models.TextField(null=True, blank=True)
     transaction_num = models.CharField(unique=True, max_length=19, null=True, blank=True,
                                        help_text="Transaction Number")
     card_type = models.CharField(choices=CREDIT_CARD_TYPES, max_length=2, null=True, blank=True)
     receipt_no = models.CharField(unique=True, max_length=12, null=True, blank=True, help_text="Receipt Number")
-    order = models.ForeignKey('payments.Order')
+    order = models.OneToOneField('payments.Order')
 
     def __unicode__(self):
-        unicode_str = self.transaction_num + self.status if self.transaction_num else self.status
-        return unicode_str
+        return self.order.merch_txn_ref + '-' + self.get_status_display()

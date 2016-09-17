@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block title%}Contact{% endblock %}
+{% block content %}
+<section id="section-content" class="content page-17 moto-section" data-widget="section" data-container="section">
+    <div class="moto-widget moto-widget-row row-fixed" data-widget="row">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-md-12" data-container="container">
+                    <h3>Your transaction was successful.</h3>
+                    {{payment.status_message}}
+                    <p>You will receive a call shortly.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -105,7 +105,7 @@
                    </p>
                </div>
                <div class="row">
-                   <h2><a href="{% url 'payment' %}">Price $350</a></h2>
+                   <h2><a href="{% url 'payment_without_country' 350 CS %}">Price $350</a></h2>
                </div>
             </div>
         </div>
@@ -128,7 +128,7 @@
                    </p>
                </div>
                <div class="row">
-                   <h2><a href="{% url 'payment' %}">Price $550</a></h2>
+                   <h2><a href="{% url 'payment_without_country' 550 CS %}">Price $550</a></h2>
                </div>
             </div>
         </div>
@@ -151,13 +151,13 @@
                    </p>
                </div>
                <div class="row">
-                   <h2><a href="{% url 'payment' %}">Price $750</a></h2>
+                   <h2><a href="{% url 'payment_without_country' 750 CS %}">Price $750</a></h2>
                </div>
             </div>
         </div>
     </div>
 
 </div>
-<h2><a href="{% url 'payment' %}">Include Cover Letter for USD 99.00 :</a></h2>
+<h2><a href="{% url 'payment_without_country' 99 CS %}">Include Cover Letter for USD 99.00 :</a></h2>
 {% endblock %}
 {% block service_content_2_2 %}{% endblock %}

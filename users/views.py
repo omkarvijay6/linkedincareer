@@ -11,7 +11,7 @@ def user_login(request):
         return HttpResponseRedirect(reverse('payment'))
     auth_form = UserLoginForm()
     if request.method == 'POST':
-        nextpage = request.GET.get('next', reverse('payment'))
+        nextpage = request.GET.get('next', reverse('index'))
         auth_form = UserLoginForm(data=request.POST)
         if auth_form.is_valid():
             login(request, auth_form.get_user())

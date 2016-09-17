@@ -70,7 +70,7 @@ def _update_payment(callback_data, payment):
     payment.batch_scheduled_date = datetime.strptime(batch_no, '%Y%M%d') if batch_no else None
     payment.status_message = callback_data.get('vpc_Message', None)
     payment.transaction_num = callback_data.get('vpc_TransactionNo', None)
-    payment.card_type = callback_data.get('vpc_card', None)
+    payment.card_type = callback_data.get('vpc_Card', None)
     payment.receipt_no = callback_data.get('vpc_ReceiptNo', None)
     if response_code == '0':
         payment.status = StatusChoices.successful.value

@@ -146,3 +146,8 @@ VPC_MERCHANT=os.environ.get('VPC_MERCHANT', 'invalid_merchant')
 VPC_RETURN_URL=os.environ.get('VPC_RETURN_URL', 'invalid_url')
 VPC_VERSION=os.environ.get('VPC_VERSION', 'invalid_version')
 VPC_TITLE=os.environ.get('VPC_TITLE', 'invalid_title')
+
+COUNTRIES_OVERRIDE = {
+
+    'MI': 'Middle East (Gulf)'
+}

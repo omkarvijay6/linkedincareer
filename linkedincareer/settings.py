@@ -39,7 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'payments'
+    'django_countries',
+
+    'payments',
+    'core',
+
 ]
 
 MIDDLEWARE_CLASSES = [

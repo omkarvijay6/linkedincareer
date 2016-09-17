@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^', include('career_site.urls')),
     url(r'^users/', include('users.urls')),
     url(r'^payments/', include('payments.urls')),
+    url(r'^core/', include('core.urls')),
     url(r'^subscription/payment-callback/$', payment_callback, name='payment_callback'),
 
 ]

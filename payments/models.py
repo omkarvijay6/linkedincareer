@@ -5,21 +5,9 @@ from django.conf import settings
 from django_countries.fields import CountryField
 
 # Create your models here.
+from core.models import TimeStampedModel
 from payments.card_types import CREDIT_CARD_TYPES
 from payments.enums import StatusChoices
-
-
-class TimeStampedModel(models.Model):
-    """
-    An abstract base class model that provides self-updating ''created_ts''
-    and ''updated_ts'' timestamp fields.
-    """
-    created_ts = models.DateTimeField('created', auto_now_add=True)
-    updated_ts = models.DateTimeField('updated', auto_now=True)
-    is_active = models.BooleanField(default=True, db_index=True)
-
-    class Meta:
-        abstract = True
 
 
 class Order(TimeStampedModel):
@@ -36,7 +24,6 @@ class Order(TimeStampedModel):
     merch_txn_ref = models.CharField(unique=True, max_length=40, help_text="Merchant Transaction Reference")
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     country = CountryField(null=True, blank=True)
-    service = models.OneToOneField('core.Service')
 
     def save(self, *args, **kwargs):
         """

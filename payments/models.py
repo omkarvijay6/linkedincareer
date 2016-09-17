@@ -52,7 +52,7 @@ class Payment(TimeStampedModel):
     STATUS_CHOICES = (
         (StatusChoices.pending.value, 'PENDING'),
         (StatusChoices.failed.value, 'FAILED'),
-        (StatusChoices.approved.value, 'APPROVED'),
+        (StatusChoices.successful.value, 'APPROVED'),
     )
     status = models.CharField(choices=STATUS_CHOICES, max_length=1, default=StatusChoices.pending.value)
     status_message = models.TextField(null=True, blank=True)

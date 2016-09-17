@@ -23,6 +23,6 @@ class CardTypes(Enum):
 
 class StatusChoices(Enum):
 
-    approved = '0'
+    successful = '0'
     pending = '1'
     failed = '2'

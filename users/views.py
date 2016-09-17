@@ -8,7 +8,8 @@ from users.forms import UserLoginForm
 
 def user_login(request):
     if request.user.is_authenticated():
-        return HttpResponseRedirect(reverse('payment'))
+        nextpage = request.GET.get('next', reverse('index'))
+        return HttpResponseRedirect(nextpage)
     auth_form = UserLoginForm()
     if request.method == 'POST':
         nextpage = request.GET.get('next', reverse('index'))

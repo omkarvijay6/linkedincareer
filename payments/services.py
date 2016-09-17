@@ -1,8 +1,9 @@
 from datetime import datetime
 
 from django.shortcuts import get_object_or_404
-
 import jwt
+
+from core.models import Service
 from payments.enums import StatusChoices
 from payments.migs_mastercard import MigsClient
 from payments.models import Order, Payment
@@ -41,14 +42,15 @@ def generate_unique_merch_txn_ref():
     return "ORDER" + "-" + unique_order_id
 
 
-def place_order_for_user(user):
-    order = Order.objects.create(user=user)
+def place_order_for_user(user, service, amount, country_code):
+    order = Order.objects.create(user=user, title=service.name,
+                                 amount=amount, country=country_code)
     Payment.objects.create(order=order)
     return order
 
 
-def get_payment_gateway_url(user, amount):
-    order = place_order_for_user(user)
+def get_payment_gateway_url(user, amount, service, country_code):
+    order = place_order_for_user(user, service, amount, country_code)
     merchant_transaction_ref = order.merch_txn_ref
     migs_client = MigsClient(merchant_transaction_ref, amount)
     payment_gateway_url = migs_client.generate_payment_url()
@@ -63,17 +65,17 @@ def _get_order_and_payment(callback_data, user):
 
 
 def _update_payment(callback_data, payment):
+    response_code = callback_data.get('vpc_TxnResponseCode', None)
     batch_no = callback_data.get('vpc_BatchNo', None)
     payment.batch_scheduled_date = datetime.strptime(batch_no, '%Y%M%d') if batch_no else None
     payment.status_message = callback_data.get('vpc_Message', None)
     payment.transaction_num = callback_data.get('vpc_TransactionNo', None)
     payment.card_type = callback_data.get('vpc_card', None)
     payment.receipt_no = callback_data.get('vpc_ReceiptNo', None)
-    # TODO find out what all values are approved ones
-    if payment.transaction_num == '0':
-        payment.status = StatusChoices.approved.value
+    if response_code == '0':
+        payment.status = StatusChoices.successful.value
     else:
-        payment.status = StatusChoices.rejected.value
+        payment.status = StatusChoices.failed.value
     payment.save()
     return payment
 
@@ -83,9 +85,11 @@ def update_user_payment(user, callback_data):
     payment = _update_payment(callback_data, payment)
     return payment
 
+
 def remove_secure_hash_from_payload(payment_payload):
     response_secure_hash = payment_payload.pop('vpc_SecureHash')
     return response_secure_hash, payment_payload
+
 
 def validate_payment_payload(payment_payload):
     payment_payload = payment_payload.dict()
@@ -100,3 +104,8 @@ def validate_payment_payload(payment_payload):
     else:
         is_valid = False
     return is_valid
+
+
+def get_service(service_nk):
+    service = get_object_or_404(Service, nk=service_nk)
+    return service

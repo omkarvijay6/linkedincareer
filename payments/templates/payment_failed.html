@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block title%}payment failed{% endblock %}
+{% block header_nav_links %}{% endblock %}
 {% block extra_header_nav_links %}
     <li class="moto-widget-menu-item">
         {% if request.user.is_authenticated %}
@@ -16,7 +17,8 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="moto-cell col-sm-12" data-container="container">
-                    <h1>{{payment.status_message}}</h1>
+                    <h1>Pament Failed</h1>
+                    <h2>{{payment.status_message}}</h2>
                     <p>You will receive a call shortly</p>
                 </div>
             </div>

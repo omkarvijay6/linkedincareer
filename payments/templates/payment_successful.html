@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 {% block title%}payment successful{% endblock %}
+{% block header_nav_links %}{% endblock %}
 {% block extra_header_nav_links %}
     <li class="moto-widget-menu-item">
         {% if request.user.is_authenticated %}

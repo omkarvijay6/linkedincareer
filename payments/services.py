@@ -1,7 +1,6 @@
 from datetime import datetime
 
 from django.shortcuts import get_object_or_404
-import jwt
 
 from core.models import Service
 from payments.enums import StatusChoices
@@ -37,9 +36,9 @@ PaymentStatus = {
 
 
 def generate_unique_merch_txn_ref():
-    unique_no = datetime.now().strftime(("%f%d%m%Y%S%M%H"))
-    unique_order_id = jwt.encode({}, unique_no, algorithm='HS256')[-20:].upper()
-    return "ORDER" + "-" + unique_order_id
+    unique_no = datetime.now().strftime(("%f%d%m%S%M%H"))
+    # unique_order_id = jwt.encode({}, unique_no, algorithm='HS256')[-20:].upper()
+    return "ORDER" + "-" + unique_no
 
 
 def place_order_for_user(user, service, amount, country_code):

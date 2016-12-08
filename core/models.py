@@ -32,6 +32,7 @@ class Service(models.Model):
     nk = models.CharField(max_length=30, unique=True)
     name = models.CharField(max_length=255)
     description = models.TextField(null=True, blank=True)
+    amount = models.IntegerField()
 
     def __unicode__(self):
         return self.name

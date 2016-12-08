@@ -35,7 +35,7 @@ PaymentStatus = {
 }
 
 
-def generate_unique_merch_txn_ref():
+def generate_unique_transaction_id():
     unique_no = datetime.now().strftime(("%f%d%m%S%M%H"))
     # unique_order_id = jwt.encode({}, unique_no, algorithm='HS256')[-20:].upper()
     return "ORDER" + "-" + unique_no

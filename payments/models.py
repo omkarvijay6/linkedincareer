@@ -30,8 +30,8 @@ class Order(TimeStampedModel):
         override save method to create an unique merchant transaction reference
         """
         if self.pk is None:
-            from payments.services import generate_unique_merch_txn_ref
-            self.merch_txn_ref = generate_unique_merch_txn_ref()
+            from payments.services import generate_unique_transaction_id
+            self.merch_txn_ref = generate_unique_transaction_id()
         super(Order, self).save(*args, **kwargs)
 
     def __unicode__(self):

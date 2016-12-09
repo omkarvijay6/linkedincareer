@@ -43,9 +43,9 @@ def view_that_asks_for_money(request):
         "amount": "1.00",
         "item_name": "name of the item",
         "invoice": "28347293849834",
-        "notify_url": "http://localhost:8000/payments/paypal/notify/" + reverse('paypal-ipn'),
-        "return_url": "http://localhost:8000/payments/paypal/return/",
-        "cancel_return": "http://localhost:8000/payments/paypal/cancel/",
+        "notify_url": "https://www.globalindeedcareers.com/payments/paypal/notify/" + reverse('paypal-ipn'),
+        "return_url": "https://www.globalindeedcareers.com/payments/paypal/return/",
+        "cancel_return": "https://www.globalindeedcareers.com/payments/paypal/cancel/",
         "custom": "Upgrade all users!",  # Custom command to correlate to some function later (optional)
     }
 

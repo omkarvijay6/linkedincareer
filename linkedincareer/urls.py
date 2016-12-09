@@ -25,4 +25,5 @@ urlpatterns = [
     url(r'^core/', include('core.urls')),
     url(r'^subscription/payment-callback/$', payment_callback, name='payment_callback'),
 
+    url(r'^paypal/', include('paypal.standard.ipn.urls')),
 ]

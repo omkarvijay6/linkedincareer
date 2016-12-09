@@ -40,10 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'django_countries',
+    'paypal.standard.ipn',
 
-    'payments',
     'core',
-
+    'payments',
 ]
 
 MIDDLEWARE_CLASSES = [

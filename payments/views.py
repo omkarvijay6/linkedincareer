@@ -43,7 +43,7 @@ def view_that_asks_for_money(request):
         "business": request.user.email,
         "amount": "1.00",
         "item_name": "name of the item",
-        "invoice": "28347293849834",
+        "invoice": "283472938498342387",
         "notify_url": "https://globalindeedcareers.herokuapp.com/payments/paypal/notify/",
         "return_url": "https://globalindeedcareers.herokuapp.com/payments/paypal/return/",
         "cancel_return": "https://globalindeedcareers.herokuapp.com/payments/paypal/cancel/",

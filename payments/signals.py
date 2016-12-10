@@ -27,5 +27,5 @@ def invalid_money(sender, **kwargs):
     ipn_obj = sender
     print "invalid money"
 
-invalid_ipn_received.connect(invalid_ipn_received)
+invalid_ipn_received.connect(invalid_money)
 valid_ipn_received.connect(show_me_the_money)

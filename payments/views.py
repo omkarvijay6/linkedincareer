@@ -66,9 +66,14 @@ def paypal_notify(request):
 @login_required
 @csrf_exempt
 def paypal_return(request):
+    print "returned"
     print request.POST
+    print request.GET
     return render(request, "payment.html", {})
 
 @login_required
 def paypal_cancel(request):
+    print "cancel"
+    print request.POST
+    print request.GET
     return render(request, "payment.html", {})

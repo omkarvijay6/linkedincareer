@@ -56,6 +56,7 @@ def view_that_asks_for_money(request):
     return render(request, "payment.html", context)
 
 @login_required
+@csrf_exempt
 def paypal_notify(request):
     print "notified"
     print request.GET

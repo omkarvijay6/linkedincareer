@@ -43,8 +43,8 @@ def view_that_asks_for_money(request):
         "amount": "1.00",
         "item_name": "name of the item",
         "invoice": "28347293849834",
-        "notify_url": "https://www.globalindeedcareers.herokuapp.com/payments/paypal/notify/" + reverse('paypal-ipn'),
-        "return_url": "https://www.globalindeedcareers.herokuapp.com/payments/paypal/return/",
+        "notify_url": "https://globalindeedcareers.herokuapp.com/payments/paypal/notify/" + reverse('paypal-ipn'),
+        "return_url": "https://globalindeedcareers.herokuapp.com/payments/paypal/return/",
         "cancel_return": "https://globalindeedcareers.herokuapp.com/payments/paypal/cancel/",
         "custom": "Upgrade all users!",  # Custom command to correlate to some function later (optional)
     }

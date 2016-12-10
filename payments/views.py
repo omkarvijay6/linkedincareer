@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 
 from paypal.standard.forms import PayPalPaymentsForm
 
@@ -56,15 +57,14 @@ def view_that_asks_for_money(request):
 
 @login_required
 def paypal_notify(request):
-    import ipdb;ipdb.set_trace
     return render(request, "payment.html", {})
 
 @login_required
+@csrf_exempt
 def paypal_return(request):
-    import ipdb;ipdb.set_trace
+    print request.POST
     return render(request, "payment.html", {})
 
 @login_required
 def paypal_cancel(request):
-    import ipdb;ipdb.set_trace
     return render(request, "payment.html", {})

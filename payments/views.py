@@ -111,6 +111,7 @@ def paypal_notify(request):
 def paypal_return(request):
     print "return called"
     post_data = request.POST
+    print post_data
     invoice = post_data['invoice']
     amount = eval(post_data['payment_gross'])
     txn_id = post_data['txn_id']

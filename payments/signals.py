@@ -33,6 +33,7 @@ def show_me_the_money(sender, **kwargs):
             print "user paid"
     else:
         print "payment not completed"
+        print ipn_obj.payment_status
 
 def invalid_money(sender, **kwargs):
     ipn_obj = sender

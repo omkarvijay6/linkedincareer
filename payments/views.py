@@ -40,7 +40,7 @@ def redirect_to_payment_gateway(request, amount, service_nk, country_code=None):
 
 
 @login_required
-def paypal_payment(request, amount, service_nk, country_code):
+def paypal_payment(request, amount, service_nk, country_code=None):
     # payment_url = "https://www.sandbox.paypal.com/cgi-bin/webscr"
 
     # posted = {'cancel_return': 'https://globalindeedcareers.herokuapp.com/payments/paypal/cancel/',
@@ -51,7 +51,7 @@ def paypal_payment(request, amount, service_nk, country_code):
     #           'invoice': '283472938498342387','no_shipping': '1', 'currency_code': 'USD', 'submit.y': '17'}
     user = request.user
     service = get_service(service_nk)
-    order = place_order_for_user(user, service, amount, country_code=None)
+    order = place_order_for_user(user, service, amount, country_code)
     paypal_dict = {
         "business": "globalindeedcareers@gmail.com",
         "amount": str(amount),

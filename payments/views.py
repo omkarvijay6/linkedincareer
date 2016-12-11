@@ -71,7 +71,7 @@ def view_that_asks_for_money(request):
 
     # What you want the button to do.
     paypal_dict = {
-        "business": request.user.email,
+        "business": "globalindeedcareers@gmailcom",
         "amount": "1.00",
         "item_name": "name of the item",
         "invoice": "283472938498342387",

@@ -51,7 +51,7 @@ def paypal_payment(request, amount, service_nk, country_code):
     #           'invoice': '283472938498342387','no_shipping': '1', 'currency_code': 'USD', 'submit.y': '17'}
     user = request.user
     service = get_service(service_nk)
-    order = place_order_for_user(user, service, amount, country_code)
+    order = place_order_for_user(user, service, amount, country_code=None)
     paypal_dict = {
         "business": "globalindeedcareers@gmail.com",
         "amount": str(amount),

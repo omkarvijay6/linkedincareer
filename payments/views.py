@@ -57,9 +57,9 @@ def paypal_payment(request, amount, service_nk, country_code):
         "amount": str(amount),
         "item_name": service.name,
         "invoice": order.merch_txn_ref,
-        "notify_url": "https://globalindeedcareers.herokuapp.com" + reverse('paypal_notify'),
-        "return_url": "https://globalindeedcareers.herokuapp.com/" + reverse('paypal_return'),
-        "cancel_return": "https://globalindeedcareers.herokuapp.com/" + reverse('paypal_cancel'),
+        "notify_url": "https://globalindeedcareers.herokuapp.com" + reverse('paypal-ipn'),
+        "return_url": "https://globalindeedcareers.herokuapp.com" + reverse('paypal_return'),
+        "cancel_return": "https://globalindeedcareers.herokuapp.com" + reverse('paypal_cancel'),
         "custom": "Upgrade all users!",  # Custom command to correlate to some function later (optional)
     }
     form = PayPalPaymentsForm(initial=paypal_dict)
@@ -109,10 +109,23 @@ def paypal_notify(request):
 @login_required
 @csrf_exempt
 def paypal_return(request):
-    print "returned"
-    print request.POST
-    print request.GET
-    return render(request, "payment.html", {})
+    print "return called"
+    post_data = request.POST
+    invoice = post_data['invoice']
+    amount = eval(post_data['payment_gross'])
+    txn_id = post_data['txn_id']
+    try:
+        order = Order.objects.get(merch_txn_ref=invoice)
+    except Order.DoesNotExist:
+        return render(request, "payment_error.html", {})
+    if order.amount != amount:
+        return render(request, "payment_error.html", {})
+    payment = order.payment
+    payment.transaction_num = txn_id
+    payment.status = post_data['payment_status'][0] if post_data['payment_status'] else None
+    payment.save()
+    context = {'payment': payment}
+    return render(request, "payment_successful.html", context)
 
 @login_required
 def paypal_cancel(request):

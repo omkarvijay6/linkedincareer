@@ -2,7 +2,7 @@ from django.conf.urls import url
 from django.views.generic import TemplateView
 
 from payments.views import redirect_to_payment_gateway, view_that_asks_for_money, paypal_notify, paypal_return, \
-    paypal_cancel
+    paypal_cancel, paypal_payment
 
 urlpatterns = [
     url(r'^redirect/payment-gateway/(?P<amount>\d+)/(?P<service_nk>\w+)/(?P<country_code>\w+)/$',
@@ -16,6 +16,12 @@ urlpatterns = [
     url(r'^paypal/$', view_that_asks_for_money, name='paypal'),
     url(r'^paypal/notify/$', paypal_notify, name='paypal_notify'),
     url(r'^paypal/return/$', paypal_return, name='paypal_return'),
-    url(r'^paypal/cancel/$', paypal_cancel, name='paypal_cancel')
+    url(r'^paypal/cancel/$', paypal_cancel, name='paypal_cancel'),
+
+    # url(r'^paypal/payment/(?P<amount>\d+)/(?P<service_nk>\w+)/$', paypal_payment, name="paypal_payment")
+    url(r'^paypal/payment-gateway/(?P<amount>\d+)/(?P<service_nk>\w+)/(?P<country_code>\w+)/$',
+        paypal_payment, name='paypal_payment_with_country'),
+    url(r'^paypal/payment-gateway/(?P<amount>\d+)/(?P<service_nk>\w+)/$', paypal_payment,
+        name='paypal_payment_without_country'),
 
 ]

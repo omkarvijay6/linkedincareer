@@ -8,6 +8,8 @@ from django_countries.fields import CountryField
 from core.models import TimeStampedModel
 from payments.card_types import CREDIT_CARD_TYPES
 from payments.enums import StatusChoices
+from paypal.standard.ipn.models import  *
+from paypal.standard.ipn.views import  *
 
 
 class Order(TimeStampedModel):
@@ -24,6 +26,7 @@ class Order(TimeStampedModel):
     merch_txn_ref = models.CharField(unique=True, max_length=40, help_text="Merchant Transaction Reference")
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     country = CountryField(null=True, blank=True)
+    paid = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
         """

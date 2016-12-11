@@ -53,7 +53,7 @@ def paypal_payment(request, amount, service_nk, country_code):
     service = get_service(service_nk)
     order = place_order_for_user(user, service, amount, country_code)
     paypal_dict = {
-        "business": "globalindeedcareers@gmailcom",
+        "business": "vijay@globalindeedcareers.com",
         "amount": str(amount),
         "item_name": service.name,
         "invoice": order.merch_txn_ref,

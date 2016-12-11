@@ -151,3 +151,6 @@ COUNTRIES_OVERRIDE = {
 
     'MI': 'Middle East (Gulf)'
 }
+
+
+PAYPAL_TEST = True

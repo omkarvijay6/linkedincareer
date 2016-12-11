@@ -110,23 +110,23 @@ def paypal_notify(request):
 @csrf_exempt
 def paypal_return(request):
     print "return called"
-    post_data = request.POST
-    print post_data
-    invoice = post_data['invoice']
-    amount = eval(post_data['payment_gross'])
-    txn_id = post_data['txn_id']
-    try:
-        order = Order.objects.get(merch_txn_ref=invoice)
-    except Order.DoesNotExist:
-        return render(request, "payment_error.html", {})
-    if order.amount != amount:
-        return render(request, "payment_error.html", {})
-    payment = order.payment
-    payment.transaction_num = txn_id
-    payment.status = post_data['payment_status'][0] if post_data['payment_status'] else None
-    payment.save()
-    context = {'payment': payment}
-    return render(request, "payment_successful.html", context)
+    # post_data = request.POST
+    # print post_data
+    # invoice = post_data['invoice']
+    # amount = eval(post_data['payment_gross'])
+    # txn_id = post_data['txn_id']
+    # try:
+    #     order = Order.objects.get(merch_txn_ref=invoice)
+    # except Order.DoesNotExist:
+    #     return render(request, "payment_error.html", {})
+    # if order.amount != amount:
+    #     return render(request, "payment_error.html", {})
+    # payment = order.payment
+    # payment.transaction_num = txn_id
+    # payment.status = post_data['payment_status'][0] if post_data['payment_status'] else None
+    # payment.save()
+    # context = {'payment': payment}
+    return render(request, "payment_successful.html", {})
 
 @login_required
 def paypal_cancel(request):

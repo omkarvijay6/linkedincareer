@@ -20,6 +20,7 @@ from payments.views import payment_callback
 urlpatterns = [
     url(r'^godzillaroar/', admin.site.urls),
     url(r'^', include('career_site.urls')),
+    url(r'^accounts/', include('registration.backends.hmac.urls')),
     url(r'^users/', include('users.urls')),
     url(r'^payments/', include('payments.urls')),
     url(r'^core/', include('core.urls')),

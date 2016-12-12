@@ -1,6 +1,7 @@
 Django==1.9.6
 dj-database-url==0.4.1
 django-paypal==0.3.3
+django-registration==2.2
 gunicorn==19.6.0
 whitenoise==3.2
 psycopg2==2.6.1

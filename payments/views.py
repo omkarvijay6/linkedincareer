@@ -57,9 +57,9 @@ def paypal_payment(request, amount, service_nk, country_code=None):
         "amount": str(amount),
         "item_name": service.name,
         "invoice": order.merch_txn_ref,
-        "notify_url": "https://linkedincareers.herokuapp.com" + reverse('paypal-ipn'),
-        "return_url": "https://linkedincareers.herokuapp.com" + reverse('paypal_return'),
-        "cancel_return": "https://linkedincareers.herokuapp.com" + reverse('paypal_cancel'),
+        "notify_url": "http://www.globalindeedcareers.com" + reverse('paypal-ipn'),
+        "return_url": "http://www.globalindeedcareers.com" + reverse('paypal_return'),
+        "cancel_return": "http://www.globalindeedcareers.com" + reverse('paypal_cancel'),
         "custom": "Upgrade all users!",  # Custom command to correlate to some function later (optional)
     }
     form = PayPalPaymentsForm(initial=paypal_dict)
@@ -75,9 +75,9 @@ def view_that_asks_for_money(request):
         "amount": "1.00",
         "item_name": "name of the item",
         "invoice": "283472938498342387",
-        "notify_url": "https://linkedincareers.herokuapp.com/payments/paypal/notify/",
-        "return_url": "https://linkedincareers.herokuapp.com/payments/paypal/return/",
-        "cancel_return": "https://linkedincareers.herokuapp.com/payments/paypal/cancel/",
+        "notify_url": "http://www.globalindeedcareers.com/payments/paypal/notify/",
+        "return_url": "http://www.globalindeedcareers.com/payments/paypal/return/",
+        "cancel_return": "http://www.globalindeedcareers.com/payments/paypal/cancel/",
         "custom": "Upgrade all users!",  # Custom command to correlate to some function later (optional)
     }
 

@@ -2477,3 +2477,22 @@ div.mejs-speed-button {
 .moto-widget-audio_player audio {
     display: none;
 }
+
+img.country_flag {
+    width: 50%;
+    max-height: 50px;
+}
+
+a.buy_button {
+    background-color: #96ad00;
+    border: none;
+    color: white;
+    padding: 12px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 2px 2px;
+    cursor: pointer;
+    border-radius: 3px;
+}

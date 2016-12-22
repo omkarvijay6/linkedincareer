@@ -87,10 +87,11 @@
                              data-widget="text" data-preset="default" data-spacing="mamm">
                             <div class="moto-widget-text-content moto-widget-text-editable" style="text-align: center;">
                                 <div class="moto-spacing-bottom-small">
-                                    <img src="{% static 'images/usa.jpg' %}" data-id="298" title="" alt="" draggable="false">
+                                    <img class="country_flag" src="{% static 'images/usa_flag.png' %}" data-id="298" title="" alt="" draggable="false">
                                 </div>
                                 <p class="moto-text_system_18" align="middle">USA<br></p>
-                                <h3><a href="{% url 'paypal_payment_with_country' 299 'RC' 'US' %}" >$299</a></h3>
+                                <h3>$299</h3>
+                                <a class="buy_button" href="{% url 'paypal_payment_with_country' 299 'RC' 'US' %}">Buy now</a>
                             </div>
                         </div>
                     </div>
@@ -105,10 +106,11 @@
                              data-widget="text" data-preset="default" data-spacing="mamm">
                             <div class="moto-widget-text-content moto-widget-text-editable" style="text-align: center;">
                                 <div class="moto-spacing-bottom-small">
-                                    <img src="{% static 'images/australia.jpg' %}" data-id="298" title="" alt="" draggable="false">
+                                    <img class="country_flag" src="{% static 'images/australia_flag.png' %}" data-id="298" title="" alt="" draggable="false">
                                 </div>
                                 <p class="moto-text_system_18">Australia <br></p>
-                                <h3><a href="{% url 'paypal_payment_with_country' 299 'RC' 'AU' %}" >$299</a></h3>
+                                <h3>$299</h3>
+                                <a class="buy_button" href="{% url 'paypal_payment_with_country' 299 'RC' 'AU' %}" >Buy now</a>
                             </div>
                         </div>
                     </div>
@@ -123,10 +125,11 @@
                              data-widget="text" data-preset="default" data-spacing="mamm">
                             <div class="moto-widget-text-content moto-widget-text-editable" style="text-align: center;">
                                 <div class="moto-spacing-bottom-small">
-                                    <img src="{% static 'images/canada.jpg' %}" data-id="298" title="" alt="" draggable="false">
+                                    <img class="country_flag" src="{% static 'images/canada_flag.png' %}" data-id="298" title="" alt="" draggable="false">
                                 </div>
                                 <p class="moto-text_system_18">Canada<br></p>
-                                <h3><a href="{% url 'paypal_payment_with_country' 299 'RC' 'CA' %}" >$299</a></h3>
+                                <h3>$299</h3>
+                                <a class="buy_button" href="{% url 'paypal_payment_with_country' 299 'RC' 'CA' %}" >Buy now</a>
                             </div>
 
                         </div>
@@ -142,10 +145,11 @@
                              data-widget="text" data-preset="default" data-spacing="mamm">
                             <div class="moto-widget-text-content moto-widget-text-editable" style="text-align: center;">
                                 <div class="moto-spacing-bottom-small">
-                                    <img src="{% static 'images/india.jpg' %}" data-id="298" title="" alt="" draggable="false">
+                                    <img class="country_flag" src="{% static 'images/india_flag.png' %}" data-id="298" title="" alt="" draggable="false">
                                 </div>
                                 <p class="moto-text_system_18">India<br></p>
-                                <h3><a href="{% url 'paypal_payment_with_country' 299 'RC' 'IN' %}" >$299</a></h3>
+                                <h3>$299</h3>
+                                <a class="buy_button" href="{% url 'paypal_payment_with_country' 299 'RC' 'IN' %}" >$299</a>
                             </div>
                         </div>
                     </div>
@@ -160,10 +164,11 @@
                              data-widget="text" data-preset="default" data-spacing="mamm">
                             <div class="moto-widget-text-content moto-widget-text-editable" style="text-align: center;">
                                 <div class="moto-spacing-bottom-small">
-                                    <img src="{% static 'images/gulf.jpg' %}" data-id="298" title="" alt="" draggable="false">
+                                    <img class="country_flag" src="{% static 'images/middle_east_flag.jpg' %}" data-id="298" title="" alt="" draggable="false">
                                 </div>
                                 <p class="moto-text_system_18">Middle East<br></p>
-                                <h3><a href="{% url 'paypal_payment_with_country' 249 'RC' 'MI' %}" >$249</a></h3>
+                                <h3>$249</h3>
+                                <a class="buy_button" href="{% url 'paypal_payment_with_country' 249 'RC' 'MI' %}" >Buy now</a>
                             </div>
 
                         </div>
@@ -181,10 +186,11 @@
                              data-widget="text" data-preset="default" data-spacing="mamm">
                             <div class="moto-widget-text-content moto-widget-text-editable" style="text-align: center;">
                                 <div class="moto-spacing-bottom-small">
-                                    <img src="{% static 'images/singapore.jpg' %}" data-id="298" title="" alt="" draggable="false">
+                                    <img class="country_flag" src="{% static 'images/singapore_flag.png' %}" data-id="298" title="" alt="" draggable="false">
                                 </div>
                                 <p class="moto-text_system_18">Singapore<br></p>
-                                <h3><a href="{% url 'paypal_payment_with_country' 199 'RC' 'SG' %}" >$199</a></h3>
+                                <h3>$199</h3>
+                                <a class="buy_button" href="{% url 'paypal_payment_with_country' 199 'RC' 'SG' %}" >Buy now</a>
                             </div>
                         </div>
                     </div>
@@ -199,16 +205,36 @@
                              data-widget="text" data-preset="default" data-spacing="mamm">
                             <div class="moto-widget-text-content moto-widget-text-editable" style="text-align: center;">
                                 <div class="moto-spacing-bottom-small">
-                                    <img src="{% static 'images/malaysia.jpg' %}" data-id="298" title="" alt="" draggable="false">
+                                    <img class="country_flag" src="{% static 'images/malaysia_flag.png' %}" data-id="298" title="" alt="" draggable="false">
                                 </div>
                                 <p class="moto-text_system_18">Malaysia<br></p>
-                                <h3><a href="{% url 'paypal_payment_with_country' 199 'RC' 'MY' %}" >$199</a></h3>
+                                <h3>$199</h3>
+                                <a class="buy_button" href="{% url 'paypal_payment_with_country' 199 'RC' 'MY' %}" >Buy now</a>
                             </div>
 
                         </div>
                     </div>
                 </div>
 
+                <div class="moto-cell col-sm-3" data-container="container">
+                    <div data-css-name="moto-container_content_55e42abb"
+                         class="moto-widget moto-widget-container moto-container_content_55e42abb"
+                         data-widget="container" data-container="container">
+                        <div data-animation="fadeIn"
+                             class="moto-widget moto-widget-text moto-preset-default wow fadeIn moto-spacing-top-medium moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-medium moto-spacing-right-medium"
+                             data-widget="text" data-preset="default" data-spacing="mamm">
+                            <div class="moto-widget-text-content moto-widget-text-editable" style="text-align: center;">
+                                <div class="moto-spacing-bottom-small">
+                                    <img class="country_flag" src="{% static 'images/south_africa_flag.png' %}" data-id="298" title="" alt="" draggable="false">
+                                </div>
+                                <p class="moto-text_system_18">South Africa<br></p>
+                                <h3>$249</h3>
+                                <a class="buy_button" href="{% url 'paypal_payment_with_country' 249 'RC' 'SA' %}" >Buy now</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
 
             </div>
             {% endblock %}

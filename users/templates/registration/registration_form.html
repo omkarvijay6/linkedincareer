@@ -1,11 +1,114 @@
 {% extends "base.html" %}
 {% load i18n %}
-
+{% block title %}Register{% endblock %}
 {% block content %}
-<form method="post" action=".">
-  {% csrf_token %}
-  {{ form.as_p }}
+<section id="section-content" class="content page-17 moto-section" data-widget="section" data-container="section">
+    <div class="moto-widget moto-widget-row row-fixed">
+        <div class="container-fluid">
+            <div class="row">
 
-  <input type="submit" value="{% trans 'Submit' %}" />
-</form>
+                <div class="moto-cell col-sm-7" data-container="container">
+                    <div class="moto-widget moto-widget-text moto-preset-default      moto-spacing-top-large moto-spacing-right-auto moto-spacing-bottom-medium moto-spacing-left-auto"
+                         data-widget="text" data-preset="default" data-spacing="lama">
+                        <div class="moto-widget-text-content moto-widget-text-editable"><p
+                                class="moto-text_system_4" style="text-align: center;">Register</p></div>
+                    </div>
+                    <div class="moto-widget moto-widget-contact_form moto-preset-default moto-widget-empty moto-spacing-top-auto moto-spacing-right-auto moto-spacing-bottom-large moto-spacing-left-auto "
+                         data-preset="default" data-widget="contact_form" data-type="" data-spacing="aala">
+                            <div class="moto-color_custom4">
+                                {% if form.non_field_errors %}
+                                    {% for error in form.non_field_errors %}
+                                        {{ error }}
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <form class="moto-widget-contact_form-form" action="." method="post">{% csrf_token %}
+
+                                <div class="moto-color_custom4">
+                                  {{form.username.errors}}
+                                </div>
+                                <div class="moto-widget-contact_form-group">
+                                    <input type="text"
+                                           class="moto-widget-contact_form-field moto-widget-contact_form-input"
+                                           placeholder="Username *" name="{{form.username.html_name}}" id="id_username" maxlength="30"/>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.name.$invalid && !contactForm.name.$pristine && !contactForm.name.emailInvalid">Field is required</span>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.name.emailInvalid && !contactForm.name.$pristine">Incorrect email</span>
+                                </div>
+
+                                <div class="moto-color_custom4">
+                                  {{form.email.errors}}
+                                </div>
+                                <div class="moto-widget-contact_form-group">
+                                    <input type="text"
+                                           class="moto-widget-contact_form-field moto-widget-contact_form-input"
+                                           placeholder="E-mail *" name="{{form.email.html_name}}"/>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.email.$invalid && !contactForm.email.$pristine && !contactForm.email.emailInvalid">Field is required</span>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.email.emailInvalid && !contactForm.email.$pristine">Incorrect email</span>
+                                </div>
+
+
+                                <div class="moto-color_custom4">
+                                  {{form.password1.errors}}
+                                </div>
+                                <div class="moto-widget-contact_form-group">
+                                    <input type="password"
+                                           class="moto-widget-contact_form-field moto-widget-contact_form-input"
+                                           placeholder="Password *" name="{{form.password1.html_name}}" id="id_password1"/>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.email.$invalid && !contactForm.email.$pristine && !contactForm.email.emailInvalid">Field is required</span>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.email.emailInvalid && !contactForm.email.$pristine">Incorrect email</span>
+                                </div>
+
+                                <div class="moto-color_custom4">
+                                  {{form.password2.errors}}
+                                </div>
+                                <div class="moto-widget-contact_form-group">
+                                    <input type="password"
+                                           class="moto-widget-contact_form-field moto-widget-contact_form-input"
+                                           placeholder="Password Confirmation *" name="{{form.password2.html_name}}" id="id_password2"/>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.email.$invalid && !contactForm.email.$pristine && !contactForm.email.emailInvalid">Field is required</span>
+                                        <span class="moto-widget-contact_form-field-error ng-cloak" ng-cloak
+                                              ng-show="contactForm.email.emailInvalid && !contactForm.email.$pristine">Incorrect email</span>
+                                </div>
+
+
+
+
+                                <div class="moto-widget-contact_form-buttons">
+
+
+                                    <div class="moto-widget moto-widget-button moto-preset-5 moto-align-left"
+                                         data-preset="5" data-align="left">
+                                        <button type="submit" class="moto-widget-button-link moto-size-small">Register</button>
+                                    </div>
+                                    <button type="submit" class="hidden"></button>
+
+
+                                </div>
+
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="moto-widget moto-widget-row" data-widget="row">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="moto-cell col-sm-12" data-container="container">
+                    <div class="moto-widget moto-widget-spacer moto-preset-default" data-widget="spacer"
+                         data-spacing="">
+                        <div class="moto-widget-spacer-block" style="height: 10px;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

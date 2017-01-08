@@ -2496,3 +2496,8 @@ a.buy_button {
     cursor: pointer;
     border-radius: 3px;
 }
+
+img.company-logo {
+    height: 50%;
+    width: 100%;
+}

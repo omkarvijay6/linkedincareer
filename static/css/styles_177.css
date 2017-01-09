@@ -3132,10 +3132,21 @@ img.mfp-img {
     letter-spacing: 0;
     line-height: 1.2;
 }
+
 .moto-text_system_7 a {
     color: #3b3d3f;
     font-style: normal;
     font-weight: 500;
+}
+.bold_heading a {
+    color: #89ed1e;
+    font-style: normal;
+    font-weight: bold;
+}
+.moto-text_system_heading a {
+    color: #3b3d3f;
+    font-style: normal;
+    font-weight: bold;
 }
 .moto-text_system_7 a:hover {
     color: #aac117;
@@ -3143,6 +3154,7 @@ img.mfp-img {
     font-weight: 500;
     text-decoration: none;
 }
+
 @media (max-width: 1039px) {
 .moto-text_system_7 {
     font-size: 22px;
@@ -3416,6 +3428,7 @@ img.mfp-img {
     letter-spacing: 0;
     line-height: 1.5;
 }
+
 }
 .moto-text_system_14 {
     color: #3b3d3f;

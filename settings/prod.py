@@ -1,5 +1,5 @@
 from settings.base import *
-DEBUG = True
+DEBUG = False
 
 PAYPAL_TEST = False
 ALLOWED_HOSTS = ['*']

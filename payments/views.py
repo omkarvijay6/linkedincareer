@@ -1,6 +1,5 @@
 import requests
 
-from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
 from django.core.urlresolvers import reverse
@@ -31,7 +30,6 @@ def payment_callback(request):
     return HttpResponseRedirect(redirect_url)
 
 
-@login_required
 def redirect_to_payment_gateway(request, amount, service_nk, country_code=None):
     user = request.user
     service = get_service(service_nk)
@@ -39,7 +37,6 @@ def redirect_to_payment_gateway(request, amount, service_nk, country_code=None):
     return redirect(payment_gateway_url)
 
 
-@login_required
 def paypal_payment(request, amount, service_nk, country_code=None):
     # payment_url = "https://www.sandbox.paypal.com/cgi-bin/webscr"
 
@@ -66,7 +63,6 @@ def paypal_payment(request, amount, service_nk, country_code=None):
     context = {'order': order, 'service': service, 'form': form}
     return render(request, "payment_order.html", context)
 
-@login_required
 def view_that_asks_for_money(request):
 
     # What you want the button to do.
@@ -106,7 +102,6 @@ def paypal_notify(request):
     context = {'payment': payment}
     return render(request, "payment_successful.html", context)
 
-@login_required
 @csrf_exempt
 def paypal_return(request):
     print "return called"
@@ -128,7 +123,6 @@ def paypal_return(request):
     # context = {'payment': payment}
     return render(request, "payment_successful.html", {})
 
-@login_required
 def paypal_cancel(request):
     print "cancel"
     print request.POST

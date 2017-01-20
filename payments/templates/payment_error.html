@@ -2,15 +2,6 @@
 {% load staticfiles %}
 {% block title%}payment failed{% endblock %}
 {% block header_nav_links %}{% endblock %}
-{% block extra_header_nav_links %}
-    <li class="moto-widget-menu-item">
-        {% if request.user.is_authenticated %}
-            <a href="{% url 'user_logout' %}" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Logout</a>
-        {% else %}
-            <a href="{% url 'user_login' %}" class="moto-widget-menu-link moto-widget-menu-link-level-1 moto-link">Login</a>
-        {% endif %}
-    </li>
-{% endblock %}
 {% block content %}
 <section id="section-content" class="content page-17 moto-section" data-widget="section" data-container="section">
     <div class="moto-widget moto-widget-row row-fixed" data-widget="row">

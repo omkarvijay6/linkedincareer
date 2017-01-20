@@ -31,9 +31,8 @@ def payment_callback(request):
 
 
 def redirect_to_payment_gateway(request, amount, service_nk, country_code=None):
-    user = request.user
     service = get_service(service_nk)
-    payment_gateway_url = get_payment_gateway_url(user, amount, service, country_code)
+    payment_gateway_url = get_payment_gateway_url(amount, service, country_code)
     return redirect(payment_gateway_url)
 
 
@@ -46,9 +45,8 @@ def paypal_payment(request, amount, service_nk, country_code=None):
     #           'amount': '1.00', 'custom': 'Upgrade all users!', 'submit.x': u'85',
     #           'notify_url': 'https://globalindeedcareers.herokuapp.com/payments/paypal/notify/',
     #           'invoice': '283472938498342387','no_shipping': '1', 'currency_code': 'USD', 'submit.y': '17'}
-    user = request.user
     service = get_service(service_nk)
-    order = place_order_for_user(user, service, amount, country_code)
+    order = place_order_for_user(service, amount, country_code)
     paypal_dict = {
         "business": "globalindeedcareers@gmail.com",
         "amount": str(amount),

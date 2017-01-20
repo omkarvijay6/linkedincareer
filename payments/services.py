@@ -41,15 +41,15 @@ def generate_unique_merch_txn_ref():
     return "ORDER" + "-" + unique_no
 
 
-def place_order_for_user(user, service, amount, country_code):
-    order = Order.objects.create(user=user, title=service.name,
+def place_order_for_user(service, amount, country_code):
+    order = Order.objects.create(title=service.name,
                                  amount=amount, country=country_code)
     Payment.objects.create(order=order)
     return order
 
 
-def get_payment_gateway_url(user, amount, service, country_code):
-    order = place_order_for_user(user, service, amount, country_code)
+def get_payment_gateway_url(amount, service, country_code):
+    order = place_order_for_user(service, amount, country_code)
     merchant_transaction_ref = order.merch_txn_ref
     migs_client = MigsClient(merchant_transaction_ref, amount)
     payment_gateway_url = migs_client.generate_payment_url()

@@ -22,7 +22,8 @@ class Order(TimeStampedModel):
     payment server which checkout
     """
     title = models.CharField(max_length=255)
-    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    # disable login temporarily
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
     merch_txn_ref = models.CharField(unique=True, max_length=40, help_text="Merchant Transaction Reference")
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     country = CountryField(null=True, blank=True)

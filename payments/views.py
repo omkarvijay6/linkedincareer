@@ -126,3 +126,12 @@ def paypal_cancel(request):
     print request.POST
     print request.GET
     return render(request, "payment.html", {})
+
+def include_cover_letter(request):
+    if request.method == 'POST':
+        service_amount = int(request.POST.get('service_amount'))
+        cover_letter_amount_str = request.POST['cover_letter_amount']
+        cover_letter_amount = int(cover_letter_amount_str) if cover_letter_amount_str else 0
+        total_amount = service_amount + cover_letter_amount
+        payment_url = reverse('paypal_payment_without_country', kwargs={'amount':total_amount, 'service_nk':'CS'})
+        return HttpResponseRedirect(payment_url)

@@ -13,11 +13,30 @@
             </div>
         </div>
         <div class="container">
-            <h2>Service: {{order.title}}</h2>
-            <h2>Order id {{order.merch_txn_ref}}</h2>
-            <h2>Amuont {{order.amount}}$</h2>
-            {{ form.render }}
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Order Summary</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Service:</th>
+                  <td><h2>{{order.title}}</h2></td>
+                </tr>
+                <tr>
+                  <th scope="row">Transaction id:</th>
+                  <td><h2>{{order.merch_txn_ref}}</h2></td>
+                </tr>
+                <tr>
+                  <th scope="row">Amount</th>
+                  <td><h2>${{order.amount}}</h2></td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="paypal_buy" style="padding-left: 350px;">
+                {{ form.render }}
+            </div>
         </div>
-
     </section>
 {% endblock %}

@@ -38,7 +38,7 @@ PaymentStatus = {
 def generate_unique_merch_txn_ref():
     unique_no = datetime.now().strftime(("%f%d%m%S%M%H"))
     # unique_order_id = jwt.encode({}, unique_no, algorithm='HS256')[-20:].upper()
-    return "ORDER" + "-" + unique_no
+    return "GIC-" + unique_no
 
 
 def place_order_for_user(service, amount, country_code):

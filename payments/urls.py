@@ -2,7 +2,7 @@ from django.conf.urls import url
 from django.views.generic import TemplateView
 
 from payments.views import redirect_to_payment_gateway, view_that_asks_for_money, paypal_notify, paypal_return, \
-    paypal_cancel, paypal_payment
+    paypal_cancel, paypal_payment, include_cover_letter
 
 urlpatterns = [
     url(r'^redirect/payment-gateway/(?P<amount>\d+)/(?P<service_nk>\w+)/(?P<country_code>\w+)/$',
@@ -23,5 +23,6 @@ urlpatterns = [
         paypal_payment, name='paypal_payment_with_country'),
     url(r'^paypal/payment-gateway/(?P<amount>\d+)/(?P<service_nk>\w+)/$', paypal_payment,
         name='paypal_payment_without_country'),
+    url(r'^include/cover-letter/$', include_cover_letter, name='include_cover_letter'),
 
 ]
